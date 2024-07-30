@@ -1,0 +1,309 @@
+<ul class="navbar-nav align-items-lg-center" [class]="navClass" id="top-menu">
+    <li class="nav-item">
+        <a class="nav-link top-nav-link-ref" [routerLink]="'/home'" routerLinkActive="active">Home</a>
+    </li>
+
+    <li class="nav-item dropdown" ngbDropdown #landingDrop="ngbDropdown">
+        <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)" (click)="landingDrop.toggle()"
+            id="navbarLandings" [class.active]="isActive('/landing')">
+            Landings<i data-feather="chevron-down" class="d-inline-block icon icon-xxs ms-1 mt-lg-0 mt-1"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg" [class.show]="landingDrop.isOpen()"
+            aria-labelledby="navbarLandings">
+            <div class="row mx-0">
+                <div class="col-md-6 p-lg-0">
+                    <label class="nav-title fw-semibold fs-14 text-dark text-uppercase mb-3">Web</label>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link top-nav-link-ref" [routerLink]="'/landing/app'"
+                                [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                aria-labelledby="navbarLandings">
+                                <div class="d-flex align-items-center">
+                                    <span
+                                        class="bg-soft-primary text-primary avatar avatar-xs shadow rounded icon icon-with-bg icon-xxs me-3 flex-shrink-0">
+                                        <i data-feather="smartphone" class="icon-dual-primary"></i>
+                                    </span>
+                                    <div class="flex-grow-1">
+                                        App
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link top-nav-link-ref mt-1" [routerLink]="'/landing/saas/1'"
+                                [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                aria-labelledby="navbarLandings">
+                                <div class="d-flex align-items-center">
+                                    <span
+                                        class="bg-soft-success avatar avatar-xs shadow rounded icon icon-with-bg icon-xxs text-success me-3 flex-shrink-0">
+                                        <i data-feather="monitor" class="icon-dual-success"></i>
+                                    </span>
+                                    <div class="flex-grow-1">Saas Modern</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link top-nav-link-ref mt-1" [routerLink]="'/landing/saas/2'"
+                                [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                aria-labelledby="navbarLandings">
+                                <div class="d-flex align-items-center">
+                                    <span
+                                        class="bg-soft-info avatar avatar-xs shadow rounded icon icon-with-bg icon-xxs text-info me-3 flex-shrink-0">
+                                        <i data-feather="airplay" class="icon-dual-info"></i>
+                                    </span>
+                                    <div class="flex-grow-1">Saas Classic</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link top-nav-link-ref mt-1" [routerLink]="'/landing/startup'"
+                                [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                aria-labelledby="navbarLandings">
+                                <div class="d-flex align-items-center">
+                                    <span
+                                        class="bg-soft-orange avatar avatar-xs shadow rounded icon icon-with-bg icon-xxs text-orange me-3 flex-shrink-0">
+                                        <i data-feather="activity" class="icon-dual-orange"></i>
+                                    </span>
+                                    <div class="flex-grow-1">Startup</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link top-nav-link-ref mt-1" [routerLink]="'/landing/software'"
+                                [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                aria-labelledby="navbarLandings">
+                                <div class="d-flex align-items-center">
+                                    <span
+                                        class="bg-soft-warning avatar avatar-xs shadow rounded icon icon-with-bg icon-xxs text-warning me-3 flex-shrink-0">
+                                        <i data-feather="box" class="icon-dual-warning"></i>
+                                    </span>
+                                    <div class="flex-grow-1">Software</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 p-lg-0">
+                    <label class="nav-title fw-semibold fs-14 text-dark text-uppercase my-3 mt-md-0">Services</label>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a class="nav-link top-nav-link-ref" [routerLink]="'/landing/agency'"
+                                        [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                        aria-labelledby="navbarLandings">
+                                        <div class="d-flex align-items-center">
+                                            <span
+                                                class="bg-soft-secondary avatar avatar-xs shadow rounded icon icon-with-bg icon-xxs text-secondary me-3 flex-shrink-0">
+                                                <i data-feather="framer" class="icon-dual-secondary"></i>
+                                            </span>
+                                            <div class="flex-grow-1">Agency</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link top-nav-link-ref mt-1" [routerLink]="'/landing/coworking'"
+                                        [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                        aria-labelledby="navbarLandings">
+                                        <div class="d-flex align-items-center">
+                                            <span
+                                                class="bg-soft-info avatar avatar-xs shadow rounded icon icon-with-bg icon-xxs text-info me-3 flex-shrink-0">
+                                                <i data-feather="home" class="icon-dual-info"></i>
+                                            </span>
+                                            <div class="flex-grow-1">Coworking</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link top-nav-link-ref mt-1" [routerLink]="'/landing/crypto'"
+                                        [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                        aria-labelledby="navbarLandings">
+                                        <div class="d-flex align-items-center">
+                                            <span
+                                                class="bg-soft-orange avatar avatar-xs shadow rounded icon icon-with-bg icon-xxs text-orange me-3 flex-shrink-0">
+                                                <i data-feather="bold" class="icon-dual-orange"></i>
+                                            </span>
+                                            <div class="flex-grow-1">Crypto</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link top-nav-link-ref mt-1" [routerLink]="'/landing/marketing'"
+                                        [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                        aria-labelledby="navbarLandings">
+                                        <div class="d-flex align-items-center">
+                                            <span
+                                                class="bg-soft-primary avatar avatar-xs shadow rounded icon icon-with-bg icon-xxs text-primary me-3 flex-shrink-0">
+                                                <i data-feather="mail" class="icon-dual-primary"></i>
+                                            </span>
+                                            <div class="flex-grow-1">Marketing</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link top-nav-link-ref mt-2" [routerLink]="'/landing/portfolio'"
+                                        [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                        aria-labelledby="navbarLandings">
+                                        <div class="d-flex align-items-center">
+                                            <span
+                                                class="bg-soft-danger avatar avatar-xs shadow rounded icon icon-with-bg icon-xxs text-danger me-3 flex-shrink-0">
+                                                <i data-feather="image" class="icon-dual-danger"></i>
+                                            </span>
+                                            <div class="flex-grow-1">Portfolio</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item dropdown" ngbDropdown #pagesDrop="ngbDropdown" [autoClose]="false">
+        <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)" id="navbarPages"
+            (click)="pagesDrop.toggle()" [class.active]="isActive('/pages')">
+            Pages<i data-feather="chevron-down" class="d-inline-block icon icon-xxs ms-1 mt-lg-0 mt-1"></i>
+        </a>
+        <div aria-labelledby="navbarPages" class="dropdown-menu" [class.show]="pagesDrop.isOpen() ">
+            <ul class="nav">
+                <li class="nav-item dropdown" ngbDropdown #accountDrop="ngbDropdown" autoClose="inside">
+                    <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)" id="accountPages"
+                        (click)="accountDrop.toggle()" [class.active]="isActive('/pages/account')">
+                        Account
+                        <div class="arrow"></div>
+                    </a>
+                    <div aria-labelledby="accountPages" class="dropdown-menu" [class.show]="accountDrop.isOpen()">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/account/dashboard'"
+                                    [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/account/settings'"
+                                    [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active">Settings</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item dropdown" ngbDropdown #blogDrop="ngbDropdown" autoClose="inside">
+                    <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)" id="blogPages"
+                        (click)="blogDrop.toggle()" [class.active]="isActive('/pages/blog')">
+                        Blog
+                        <div class="arrow"></div>
+                    </a>
+                    <div aria-labelledby="blogPages" class="dropdown-menu" [class.show]="blogDrop.isOpen()">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/blog'"
+                                    routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+                                    aria-labelledby="blogPages">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/blog/post'"
+                                    [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                    aria-labelledby="blogPages">Blog Post</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <hr class="my-2" />
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/company'" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}" aria-labelledby="navbarPages">Company</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/contact'" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}" aria-labelledby="navbarPages">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/career'" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}" aria-labelledby="navbarPages">Career</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/pricing'" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}" aria-labelledby="navbarPages">Pricing</a>
+                </li>
+                <li class="nav-item dropdown" ngbDropdown #portfolioDrop="ngbDropdown" autoClose="inside">
+                    <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)" id="portfolioPages"
+                        (click)="portfolioDrop.toggle()" [class.active]="isActive('/pages/portfolio')">
+                        Portfolio
+                        <div class="arrow"></div>
+                    </a>
+                    <div aria-labelledby="portfolioPages" class="dropdown-menu" [class.show]="portfolioDrop.isOpen()">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/portfolio/grid'"
+                                    [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                    aria-labelledby="portfolioPages">Portfolio
+                                    Grid</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/portfolio/masonry'"
+                                    [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                    aria-labelledby="portfolioPages">Portfolio Masonry</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/portfolio/item'"
+                                    [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                    aria-labelledby="portfolioPages">Portfolio
+                                    Item</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <hr class="my-2" />
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/help'" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}" aria-labelledby="navbarPages">Help</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+
+    <li class="nav-item dropdown" ngbDropdown #docsDrop="ngbDropdown">
+        <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)" id="navbarDocs"
+            [class.active]="isActive('/docs/introduction') || isActive('/docs/bootstrap') || isActive('/docs/change-log')"
+            (click)="docsDrop.toggle()">
+            Docs<i data-feather="chevron-down" class="d-inline-block icon icon-xxs ms-1 mt-lg-0 mt-1"></i>
+        </a>
+        <div aria-labelledby="navbarDocs" class="dropdown-menu" [class.show]="docsDrop.isOpen()">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link top-nav-link-ref" [routerLink]="['/docs/introduction']" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}" aria-labelledby="navbarDocs">Getting Started</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link top-nav-link-ref" [routerLink]="['/docs/bootstrap']" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}" aria-labelledby="navbarDocs">Components</a>
+                </li>
+                <li class="nav-item">
+                    <hr class="my-2" />
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link top-nav-link-ref" [routerLink]="['/docs/change-log']" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}" aria-labelledby="navbarDocs">Change Log</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+
+    <ng-container *ngIf="showDownload">
+        <li class="nav-item">
+            <a class="btn nav-link me-2 shadow-none text-start" [routerLink]="['/auth/login']"
+                *ngIf="!loggedInUser">Login</a>
+            <a class="btn nav-link me-2 shadow-none text-start" [routerLink]="['/auth/logout']"
+                *ngIf="loggedInUser">Logout</a>
+        </li>
+
+        <li class="nav-item ms-2">
+            <a class="btn" [class]="ctaButtonClass" routerLink="/">Download</a>
+        </li>
+    </ng-container>
+
+</ul>
