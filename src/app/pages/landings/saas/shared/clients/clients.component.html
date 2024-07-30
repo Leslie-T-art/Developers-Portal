@@ -1,0 +1,23 @@
+<section class="section pt-8 pb-6 bg-gradient3 position-relative">
+    <div class="divider top d-none d-sm-block"></div>
+    <div class="container">
+        <div class="row" data-aos="fade-up" data-aos-duration="200">
+            <div class="col text-center">
+                <span class="badge rounded-pill badge-soft-primary px-2 py-1">Clients</span>
+                <h1 class="display-5 fw-medium">The smart people management you need</h1>
+                <p class="text-muted mx-auto">
+                    21,000+ organizations trust <span class="text-primary fw-bold">Prompt</span> to drive perfomance &
+                    engagement
+                </p>
+
+                <ul class="list-inline mt-5">
+                    <li class="list-inline-item mx-4 mx-xl-5 mb-3"
+                        *ngFor="let brand of ['amazon','google','paypal','spotify','shopify']">
+                        <img [src]="'assets/images/brands/'+brand+'.svg'" alt="" height="32" />
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

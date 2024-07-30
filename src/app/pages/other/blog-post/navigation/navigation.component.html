@@ -1,0 +1,59 @@
+<section class="position-relative pb-5">
+    <div class="container">
+        <div class="row border-top border-bottom py-4 align-items-center">
+            <div class="col-lg-2 col-6">
+
+                <a class="btn btn-white" href="javascript:void(0)" placement="top" triggers="mouseenter:mouseleave"
+                    [ngbPopover]="popContentPrev" popoverTitle="" container="body">
+                    <i class=" icon-xs icon-left-arrow me-2"></i>
+                    <span class="d-none d-sm-inline-flex">Prev Post</span>
+                </a>
+            </div>
+            <div class="col-lg-6 offset-lg-1">
+                <div class="d-flex justify-content-lg-center py-lg-0 py-4">
+                    <div class="d-flex align-items-center">
+                        <img class="me-3 avatar avatar-sm rounded-circle align-self-center"
+                            src="assets/images/avatars/img-4.jpg" alt="" />
+
+                        <div class="flex-grow-1">
+                            <h5 class="m-0">
+                                <a [routerLink]="['.']">Emily Blunt</a>
+                            </h5>
+                            <p class="text-muted mb-0 fs-14">
+                                I write about the latest trend in web design and development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 offset-lg-1 text-lg-end text-start col-6">
+                <a class="btn btn-white" href="javascript:void(0)" placement="top" triggers="mouseenter:mouseleave"
+                    [ngbPopover]="popContentNext" popoverTitle="" container="body">
+                    <span class=" d-none d-sm-inline-flex">Next Post</span>
+                    <i class="icon-xs icon-right-arrow ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<ng-template #popContentPrev>
+    <div class='d-flex align-items-center'>
+        <img src='/assets/images/blog/post1.jpg' width='60' class='me-3 rounded-sm' alt='thumb'>
+        <div class='flex-grow-1'>
+            <h6 class='fs-14 fw-semibold mt-0 mb-1'>Introducing new blazzing fast user interface</h6>
+            <span class='d-block fs-13 text-muted'>by Emily Blunt</span>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #popContentNext>
+    <div class='d-flex align-items-center'>
+        <img src='/assets/images/blog/post2.jpg' width='60' class='me-3 rounded-sm' alt='thumb'>
+        <div class='flex-grow-1'>
+            <h6 class=' fs-14 fw-semibold mt-0 mb-1'>What you should know
+                before...</h6>
+            <span class='d-block fs-13 text-muted'>by Emily Blunt</span>
+        </div>
+    </div>
+</ng-template>

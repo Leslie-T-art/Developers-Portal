@@ -1,0 +1,44 @@
+<app-docs-layout>
+    <div class="col-xl-10 col-lg-9">
+        <div class="row">
+            <div class="col-12">
+                <div class="card" id="customization">
+                    <div class="card-body">
+                        <h4 class="my-0">Code Spliting</h4>
+                        <p class="mt-2">Code-splitting is the process of taking one large bundle containing your entire
+                            app, and splitting them up into multiple smaller bundles which contain separate
+                            parts of your app. You can think of code splitting as incrementally downloading
+                            the app.</p>
+                        <p>We are using <strong><code>lazy-loading</code></strong> in order to split the
+                            code.
+                        </p>
+
+                        <div class="mt-1">
+                            <h6 class="mt-0 mb-2"><a href="https://angular.io/guide/lazy-loading-ngmodules"
+                                    target="_blank">Lazy Loading</a>
+                            </h6>
+                            <p>Lazy loading—a design pattern that loads NgModules as needed. It helps keep initial
+                                bundle sizes smaller, which in turn helps decrease load times.
+                            </p>
+                            <p><strong>After lazy loading of component:</strong></p>
+                            <p><code>
+                                {{'{'}}
+                                    path: 'home',
+                                    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+                                {{'}'}}
+                                </code>
+                            </p>
+
+                            <ngb-alert type="primary" class="border-0" [dismissible]="false">Note that, currently all
+                                the
+                                views
+                                (pages)
+                                components are loaded lazily using angular lazy loading.</ngb-alert>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-docs-layout>

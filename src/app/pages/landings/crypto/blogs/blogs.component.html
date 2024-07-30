@@ -1,0 +1,22 @@
+<section class="position-relative py-xl-8 py-6 features-3">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <h1 class="display-5 fw-medium">Useful Reading</h1>
+                <p class="text-muted mx-auto">Few articles to read to know more about cryptocurrency</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-4" *ngFor="let blog of blogs;let i=index">
+                <div class="mb-4" data-aos="fade-up" [attr.data-aos-duration]="(i+(3+i))*100">
+                    <div class="crypto-blog-box position-relative">
+                        <span class="ribbon bg-{{blog.ribbon.variant}} fw-medium">{{blog.ribbon.text}}</span>
+                        <img [src]="blog.image" alt="blog image" class="img-fluid d-block shadow rounded" />
+                    </div>
+                    <p class="text-muted mt-3 mb-0 fs-14">{{blog.date}} <b>·</b> {{blog.duration}} min read</p>
+                    <h4 class="mt-1"><a [routerLink]="['.']" class="text-dark">{{blog.title}}</a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

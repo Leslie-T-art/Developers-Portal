@@ -1,0 +1,29 @@
+<div>
+    <!-- navbar -->
+    <app-navbar-1 navClass="navbar-light zindex-10" ctaButtonClass="btn-outline-secondary btn-sm" [fixedWidth]="true">
+    </app-navbar-1>
+    <!-- hero -->
+    <app-help-hero></app-help-hero>
+</div>
+<!-- common -->
+<section class="section py-5 py-lg-8 mb-5 mb-sm-0 position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- help links -->
+                <app-help-links [helpLinks]="helpLinks">
+                </app-help-links>
+                <!-- faqs -->
+                <app-help-faqs [faqs]="faqs"></app-help-faqs>
+            </div>
+            <div class="col-lg-4">
+                <!-- support center -->
+                <app-support-center></app-support-center>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer-1></app-footer-1>
+<!-- back to top -->
+<a class="btn btn-soft-primary shadow-none btn-icon btn-back-to-top" href="javascript:void(0)" appScrollToTop><i
+        class="icon-xs" data-feather="arrow-up"></i></a>

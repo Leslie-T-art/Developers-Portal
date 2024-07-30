@@ -1,0 +1,42 @@
+<div class="row" id="blog-cards">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Blog Items</h5>
+                <p class="sub-header">
+                    Using bootstrap's <code>.card</code>, you can create a card holding blog post.
+                </p>
+
+                <div class="row">
+                    <div class="col-lg-6 col-xl-4">
+                        <app-widget-blog-post-1 badgeText="Travel" badgeVariant="danger"
+                            blogImg="assets/images/photos/2.jpg" blogTitle="Top 10 must visit best beaches of Goa"
+                            [blogFooter]="true" authorName="Emily Blunt" postDate="11 March, 2020" description="
+                            Goa and its beaches do not need an introduction! The state is well known for its
+                            spectacular beaches and it is very difficult...">
+                        </app-widget-blog-post-1>
+                    </div>
+
+                    <div class="col-lg-6 col-xl-4 offset-xl-2">
+                        <app-widget-blog-post-2 badgeText="Travel" badgeVariant="primary"
+                            blogImg="assets/images/photos/2.jpg" blogTitle="Top 10 must visit best beaches of Goa"
+                            [blogFooter]="true" authorName="Emily Blunt" autherAvatar="assets/images/avatars/img-7.jpg"
+                            postDate="11 March, 2020" hashtag="travel-diary" description="
+                                                    Goa and its beaches do not need an introduction! The state is well known for its
+                                                    spectacular beaches and it is very difficult...">
+                        </app-widget-blog-post-2>
+                    </div>
+                </div>
+
+                <p class="sub-header mt-4">An example showing minimal details</p>
+                <div class="row">
+                    <div class="col-lg-8 col-xl-5">
+                        <app-widget-blog-post-3 badgeText="Travel" badgeVariant="success"
+                            blogImg="assets/images/photos/4.jpg" blogTitle="Top 10 must visit best beaches of Goa"
+                            [avatarGroup]="avatarGroup" overlayClass="dark"></app-widget-blog-post-3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

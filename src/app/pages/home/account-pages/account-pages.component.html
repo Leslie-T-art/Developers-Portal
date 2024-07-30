@@ -1,0 +1,21 @@
+<section class="position-relative overflow-hidden features-1 py-5" id="auth-pages">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center" data-aos="fade-up">
+                <span class="badge rounded-pill badge-soft-primary px-2 py-1">Account Pages</span>
+                <h1 class="display-4 fw-semibold">Auth Pages</h1>
+            </div>
+        </div>
+
+        <div class="row mt-2" data-aos="fade-up" data-duration="600">
+            <div class="col-lg-6" *ngFor="let demo of authDemos">
+                <a [routerLink]="demo.url" class="mt-4">
+                    <div class="shadow p-2 rounded-sm border">
+                        <img [src]="demo.image" class="img-fluid" alt="demo-img" />
+                    </div>
+                    <h4 class="text-center">{{demo.name}}</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,20 @@
+<div class="header-6">
+    <!-- navbar -->
+    <app-navbar-1 navClass="navbar-light zindex-10" ctaButtonClass="btn-outline-secondary btn-sm" [fixedWidth]="true">
+    </app-navbar-1>
+    <!-- hero -->
+    <app-hero-3></app-hero-3>
+</div>
+<!-- services -->
+<app-portfolio-services></app-portfolio-services>
+<!-- portfolio-items -->
+<app-portfolio-items [projects]="projects"></app-portfolio-items>
+<!-- testimonials -->
+<app-portfolio-testimonials [sliderItems]="sliderItems"></app-portfolio-testimonials>
+<!-- cta -->
+<app-portfolio-cta></app-portfolio-cta>
+<!-- footer -->
+<app-portfolio-footer></app-portfolio-footer>
+<!-- back to top -->
+<a class="btn btn-soft-danger shadow-none btn-icon btn-back-to-top" href="javascript:void(0)" appScrollToTop><i
+        class="icon-xxs" data-feather="arrow-up"></i></a>

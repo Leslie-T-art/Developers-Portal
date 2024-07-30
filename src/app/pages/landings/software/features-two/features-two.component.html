@@ -1,0 +1,28 @@
+<section class="py-4">
+    <div class="container bg-soft-warning p-5 rounded-lg" data-aos="fade-up" data-aos-duration="700">
+        <h4 class="display-5 fw-medium mb-2">Prompt works on Every Device</h4>
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <ul class="list-inline mb-0 mt-4">
+                    <li class="list-inline-item text-center" *ngFor="let feature of features;let i=index"
+                        [ngClass]="{'me-3 me-sm-5': i<features.length-1}">
+                        <span class="icon icon-sm text-secondary">
+                            <i [attr.data-feather]="feature.deviceIcon" class="icon-dual-dark"></i>
+                        </span>
+                        <h6 class="mb-lg-0">{{feature.deviceName}}</h6>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <div class="text-lg-center mt-5 mt-lg-0">
+                    <a [routerLink]="['.']" class="btn btn-primary rounded">
+                        Get Propmt for Free <i class="icon-xs ms-1" data-feather="arrow-right"></i>
+                    </a>
+
+                    <p class="text=muted mt-2 fs-12">Looking for older versions? <a [routerLink]="['.']">Click Here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

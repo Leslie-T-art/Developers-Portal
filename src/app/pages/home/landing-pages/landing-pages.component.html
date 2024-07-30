@@ -1,0 +1,23 @@
+<section class="mt-5 position-relative overflow-hidden features-1 py-5" id="demos">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center" data-aos="fade-up">
+                <span class="badge rounded-pill badge-soft-primary px-2 py-1">Demos</span>
+                <h1 class="display-4 fw-semibold">Landing Pages</h1>
+                <p class="text-muted mx-auto">Modern landing pages available for every need</p>
+            </div>
+        </div>
+
+        <div class="row mt-2" data-aos="fade-up" data-duration="600">
+            <div class="col-lg-6" *ngFor="let demo of landingDemos">
+                <a [routerLink]="demo.url" class="mt-4">
+                    <div class="shadow p-2 rounded-sm border">
+                        <img [src]="demo.image" class="img-fluid" alt="demo-img" />
+                    </div>
+                    <h4 class="text-center mt-3">{{demo.name}}</h4>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>

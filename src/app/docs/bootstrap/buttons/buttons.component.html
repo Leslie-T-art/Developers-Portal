@@ -1,0 +1,84 @@
+<div class="row" id="buttons">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <div>
+                    <h5 class="card-title mb-0">Buttons</h5>
+                    <p class="sub-header">
+                        Use the button classes on an <code>&lt;a&gt;</code>,
+                        <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.
+                    </p>
+
+                    <div class="button-list">
+                        <button type="button" *ngFor="let variant of buttonVariants1;"
+                            class="me-2 mb-2 mb-xl-0 btn btn-{{variant}}">{{variant | titlecase}}</button>
+                    </div>
+
+                    <p class="sub-header mt-4">
+                        In need of a button, but not the hefty background colors they bring? Replace the
+                        default modifier classes with the <code>.btn-outline-*</code> ones to remove all
+                        background images and colors on any button.
+                    </p>
+
+                    <div class="button-list">
+                        <button type="button" *ngFor="let variant of buttonVariants2;" class="me-2 mb-2 mb-xl-0 btn"
+                            [class]="variant==='white' ? 'btn-'+variant : 'btn-outline-'+variant">
+                            {{variant | titlecase}}
+                        </button>
+                    </div>
+
+                    <p class="sub-header mt-4">
+                        Replace the default modifier classes with the <code>.btn-soft-*</code>
+                        ones to have a softer background color on any button.
+                    </p>
+
+                    <div class="button-list">
+                        <button type="button" *ngFor="let variant of buttonVariants1;"
+                            class="me-2 mb-2 mb-xl-0 btn btn-soft-{{variant}}">{{variant |
+                            titlecase}}</button>
+                    </div>
+
+                    <p class="sub-header mt-4">
+                        Add a class <code>.btn-rounded</code> with the default modifier classes to have rounded edges.
+                    </p>
+
+                    <div class="button-list mt-2">
+                        <button type="button" *ngFor="let variant of buttonVariants1;"
+                            class="me-2 mb-2 mb-xl-0 btn btn-rounded btn-{{variant}}">{{variant |
+                            titlecase}}</button>
+                    </div>
+
+                    <p class="sub-header mt-4">
+                        Fancy larger or smaller buttons? Add <code>.btn-lg</code> or
+                        <code>.btn-sm</code> for additional sizes.
+                    </p>
+
+                    <div class="button-list">
+                        <button type="button" class="btn mb-2 mb-sm-0 btn-primary btn-lg me-2">Button Large</button>
+                        <button type="button" class="btn mb-2 mb-sm-0 btn-primary me-2">Button Regular</button>
+                        <button type="button" class="btn mb-2 mb-sm-0 btn-primary btn-sm">Button Small</button>
+                    </div>
+
+                    <p class="sub-header mt-4">Buttons with icon - variations</p>
+                    <div class="button-list">
+                        <button type="button" class="me-2 mb-2 mb-sm-0 btn btn-primary">
+                            <i class="icon-xs me-1" data-feather="play"></i> Button with icon on left
+                        </button>
+                        <button type="button" class="me-2 mb-2 mb-sm-0 btn btn-primary">
+                            Button with icon on right <i class="icon-xs ms-1" data-feather="play"></i>
+                        </button>
+
+                        <button type="button" class="me-2 mb-2 mb-sm-0 btn btn-primary btn-icon d-inline-flex">
+                            <i class="icon-xs" data-feather="play"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-primary btn-rounded-circle btn-icon d-inline-flex">
+                            <i class="icon-xs" data-feather="play"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

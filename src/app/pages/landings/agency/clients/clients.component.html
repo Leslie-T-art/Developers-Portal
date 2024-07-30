@@ -1,0 +1,30 @@
+<section class="section py-4 py-sm-8 bg-soft-orange position-relative">
+    <div class="divider top d-none d-sm-block"></div>
+    <div class="container">
+        <div class="row py-4">
+            <div class="col-lg-11">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <span class="badge rounded-pill badge-soft-orange px-2 py-1 mb-2">Our Customers</span>
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="display-5 fw-semibold mb-1">We are working with fortune top 500 companies</h1>
+                    </div>
+                    <div class="col-lg-6 ps-6">
+                        <p class="mt-2 text-secondary">With our powerful set of elements, you can make beautiful and
+                            customized WordPress websites. Incredible amount of design combinations are possible by Drag
+                            & Drop, allowing you to be creative without having any design experience.</p>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col" *ngFor="let brand of ['amazon','google','paypal','spotify','shopify']">
+                        <img [src]="'assets/images/brands/'+brand+'.svg'" alt="" class="mb-2 mb-xl-0" height="32" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider bottom d-none d-sm-block"></div>
+</section>

@@ -1,0 +1,35 @@
+<section class="my-lg-5 py-5 py-sm-7 bg-gradient5 position-relative" data-aos="fade-up">
+    <div class="divider top d-none d-sm-block"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <span class="badge rounded-pill badge-soft-orange px-2 py-1">Features</span>
+                <h1 class="display-5 fw-semibold">Why Choose Us</h1>
+                <p class="text-secondary mx-auto">The benefits that will make you comfort</p>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-6" *ngFor="let feature of features">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="d-flex text-align-start">
+                            <span
+                                class="bg-soft-orange avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-orange me-4 flex-shrink-0">
+                                <i [attr.data-feather]="feature.icon" class="icon-dual-orange"></i>
+                            </span>
+
+                            <div class="flex-grow-1">
+                                <h5 class="mt-0">{{feature.title}}</h5>
+                                <p class="mb-0">
+                                    {{feature.description}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

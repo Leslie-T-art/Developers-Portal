@@ -1,0 +1,38 @@
+<div class="card shadow-none" *ngIf="blogPost">
+    <div class="row" [class]="cardClass">
+        <div class="col-md-5">
+            <img class="img-fluid rounded-sm" [src]="blogPost.image" alt="post image">
+        </div>
+        <div class="col-md-7">
+            <div class="card-body d-flex flex-column h-100" [class]="cardBodyClass">
+                <a [routerLink]="['.']">
+                    <span
+                        class="badge badge-soft-{{blogPost.tag.variant}} mb-1 mt-3 mt-md-0">{{blogPost.tag.value}}</span>
+                </a>
+
+                <h3 class="mt-1 fw-semibold">
+                    <a [routerLink]="['./post']">
+                        {{blogPost.title}}
+                    </a>
+                </h3>
+
+                <p class="text-muted">
+                    {{blogPost.description}}
+                    <a [routerLink]="['./post']" class="text-primary">read more</a>
+                </p>
+
+                <div class="mt-auto">
+                    <div class="d-flex">
+                        <img class="me-2 rounded-sm" [src]="blogPost.postedBy?.avatar" alt="" height="36">
+                        <div class="flex-grow-1">
+                            <h6 class="m-0 fs-13"><a [routerLink]="['.']">{{blogPost.postedBy?.name}}</a></h6>
+                            <p class="text-muted mb-0 fs-13">{{blogPost.postedOn?.date}} ·
+                                {{blogPost.postedOn?.duration}}
+                                min read</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

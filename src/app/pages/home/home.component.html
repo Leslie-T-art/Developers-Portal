@@ -1,0 +1,22 @@
+<div class="bg-gradient3">
+    <!-- navbar -->
+    <app-navbar-1 navClass="bg-white navbar-light zindex-10" [fixedWidth]="true" [sticky]="true"
+        ctaButtonClass="btn-outline-primary btn-sm"></app-navbar-1>
+    <!-- hero -->
+    <app-home-hero></app-home-hero>
+</div>
+<!-- landing pages -->
+<app-home-landing-pages-demo [landingDemos]="landingDemos"></app-home-landing-pages-demo>
+<!-- inner pages -->
+<app-home-inner-pages-demo [pagesDemos]="pagesDemos"></app-home-inner-pages-demo>
+<!-- account pages -->
+<app-home-account-pages-demo [authDemos]="authDemos"></app-home-account-pages-demo>
+<!-- feature -->
+<app-home-features [features]="features"></app-home-features>
+<!-- cta -->
+<app-home-cta></app-home-cta>
+<!-- footer -->
+<app-home-footer></app-home-footer>
+<!-- back to top -->
+<a class="btn btn-soft-primary shadow-none btn-icon btn-back-to-top" href="javascript:void(0)" appScrollToTop><i
+        class="icon-xxs" data-feather="arrow-up"></i></a>

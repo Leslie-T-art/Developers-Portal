@@ -1,0 +1,86 @@
+<div class="pt-5 pb-3 position-relative bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="me-5">
+                    <a class="navbar-brand me-lg-4 me-auto" [routerLink]="['.']">
+                        <img src="assets/images/logo.png" height="30" class="d-inline-block align-top" alt="" />
+                    </a>
+                    <p class="mt-4">300 Park Avenue, 12th Floor New York, NY 10022</p>
+                    <p class="mb-5">1499 Burwell Heights Road Port Arthur Meadow Nashville, TX 77642</p>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="ps-md-5">
+                            <h5 class="text-dark mb-4 fw-semibold">About</h5>
+                            <ul class="list-unstyled">
+                                <li class="my-2"><a [routerLink]="['.']" class="text-muted">Home</a></li>
+                                <li class="my-2"><a [routerLink]="['.']" class="text-muted">Portfolio</a></li>
+                                <li class="my-2"><a [routerLink]="['.']" class="text-muted">Resources</a></li>
+                                <li class="my-2"><a [routerLink]="['.']" class="text-muted">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="ps-md-5">
+                            <h5 class="text-dark mb-4 fw-semibold">Company</h5>
+                            <ul class="list-unstyled">
+                                <li class="my-2"><a [routerLink]="['.']" class="text-muted">About</a></li>
+                                <li class="my-2"><a [routerLink]="['.']" class="text-muted">Career</a></li>
+                                <li class="my-2"><a [routerLink]="['.']" class="text-muted">Clients</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="ps-md-5">
+                            <h5 class="text-dark mb-4 fw-semibold">Get in touch</h5>
+                            <ul class="list-unstyled">
+                                <li class="my-1"><a [routerLink]="['.']" class="text-muted">hello@prompt.com</a></li>
+                            </ul>
+                            <ul class="list-inline">
+                                <li class="list-inline-item me-3">
+                                    <a [routerLink]="['.']" class="text-muted me-1"><i class="icon-xs"
+                                            data-feather="facebook"></i></a>
+                                </li>
+                                <li class="list-inline-item me-3">
+                                    <a [routerLink]="['.']" class="text-muted me-1"><i class="icon-xs"
+                                            data-feather="twitter"></i></a>
+                                </li>
+                                <li class="list-inline-item me-3">
+                                    <a [routerLink]="['.']" class="text-muted me-1"><i class="icon-xs"
+                                            data-feather="linkedin"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a [routerLink]="['.']" class="text-muted me-1"><i class="icon-xs"
+                                            data-feather="instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="ps-md-5">
+                            <h5 class="text-dark mb-4 fw-semibold">Languages</h5>
+                            <ul class="list-unstyled">
+                                <li class="my-2"><a [routerLink]="['.']" class="text-muted">Francais</a></li>
+                                <li class="my-2"><a [routerLink]="['.']" class="text-muted">English</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center text-muted">
+                    <p class="pb-0 mb-0 fs-14 text-center text-muted">
+                        {{today | date:'yyyy'}} © Prompt. All rights reserved. Crafted
+                        by <a href="https://coderthemes.com/" target="_blank">Coderthemes</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

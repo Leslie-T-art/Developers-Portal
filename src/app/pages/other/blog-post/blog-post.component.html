@@ -1,0 +1,20 @@
+<div>
+    <!-- navbar -->
+    <app-navbar-1 navClass="navbar-light zindex-10 shadow" ctaButtonClass="btn-outline-secondary btn-sm"
+        [fixedWidth]="true">
+    </app-navbar-1>
+    <!-- hero -->
+    <app-blog-post-hero></app-blog-post-hero>
+</div>
+
+<!-- post content -->
+<app-blog-post-content [gallery]="gallery"></app-blog-post-content>
+<!-- navigation -->
+<app-blog-post-navigation></app-blog-post-navigation>
+<!-- comments -->
+<app-blog-post-comments></app-blog-post-comments>
+<!-- footer -->
+<app-footer-2></app-footer-2>
+<!-- back to top -->
+<a class="btn btn-soft-primary shadow-none btn-icon btn-back-to-top" href="javascript:void(0)" appScrollToTop><i
+        class="icon-xxs" data-feather="arrow-up"></i></a>

@@ -1,0 +1,63 @@
+<section class="section pt-lg-8 pt-6 pb-5 position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <span class="badge rounded-pill badge-soft-success px-2 py-1">Blog</span>
+                <h1 class="display-5 fw-semibold">Interesting Articles</h1>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col-md-4" *ngFor="let blog of blogPosts;let i=index">
+                <div class="card shadow" data-aos="fade-up" [attr.data-aos-duration]="(i + (5+i)) * 100">
+                    <div class="card-img-top-overlay">
+                        <div class="overlay"></div>
+                        <span
+                            class="card-badge top-right bg-{{blog.badge.variant}} text-white">{{blog.badge.text}}</span>
+
+                        <div class="position-relative">
+                            <img [src]="blog.image" alt="" class="card-img-top" />
+
+                            <div class="shape text-white bottom">
+
+                                <svg width="528px" height="40px" viewBox="0 0 528 40" version="1.1"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="shape" transform="matrix(-1.138336E-07 -1 1 -1.138336E-07 0 39.92764)">
+                                        <path
+                                            d="M0 0L40.5467 0C40.5467 0 -31.8215 230.87 38.7134 528.217C39.8794 533.133 31.7549 527.502 31.0925 528.75C28.7914 533.084 26.1543 528.191 24.4327 529.178C59.2372 539.206 14.0091 521.981 12.9329 530.001L1.02722 528.284L0 0Z"
+                                            transform="translate(7.629395E-06 6.103516E-05)" fill="currentColor"
+                                            stroke="none" />
+                                    </g>
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="mt-2">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <p class="mb-0"><span class="fs-13 align-middle">{{blog.date}}</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-2">
+                            <h4 class="">
+                                <a [routerLink]="['.']" class="card-title-link">{{blog.title}}</a>
+                            </h4>
+                            <p class="text-muted mb-2">
+                                {{blog.description}}
+                                <a [routerLink]="['.']">Read More</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>

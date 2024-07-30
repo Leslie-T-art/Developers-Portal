@@ -1,0 +1,73 @@
+<app-auth-layout [hasSlider]="true">
+    <ng-container cardContent>
+        <h6 class="h5 mb-0 mt-3" i18n>Welcome back!</h6>
+        <p class="text-muted mt-1 mb-4" i18n>
+            Enter your email address and password to access admin panel.
+        </p>
+
+        <form name="login-form" [formGroup]="loginForm" class="authentication-form" (ngSubmit)="onSubmit()">
+            <app-ui-preloader [display]="loading"></app-ui-preloader>
+            <ngb-alert [dismissible]="false" type="danger" *ngIf="error">
+                {{ error }}
+            </ngb-alert>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" i18n>Email <small>*</small></label>
+                <input type="email" class="form-control" id="exampleInputEmail1" i18n-placeholder placeholder="Email"
+                    name="email" formControlName="email" required
+                    [ngClass]="{'is-invalid':formSubmitted && formValues['email'].invalid}" />
+
+                <div *ngIf="formSubmitted && formValues['email'].invalid" class="invalid-feedback">
+
+                    <div *ngIf="formValues['email'].errors?.['required']" i18n>
+                        Please enter email
+                    </div>
+                    <div *ngIf="formValues['email'].errors?.['email']" i18n>
+                        Email must be a valid Email Address
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="password" i18n>Password <small>*</small></label>
+                <a [routerLink]="['../forgot-password']" class="float-end text-muted text-unline-dashed ms-1 fs-13"
+                    i18n>Forgot your password?</a>
+                <input type="password" class="form-control" id="password" name="password" i18n-placeholder
+                    placeholder="Enter your password" formControlName="password" required
+                    [ngClass]="{'is-invalid':formSubmitted && formValues['password'].invalid}" />
+                <div *ngIf="formSubmitted && formValues['password'].invalid " class="invalid-feedback">
+
+                    <div *ngIf="formValues['password'].errors?.['required']" i18n>
+                        Password is required.
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <input type="checkbox" class="form-check-input" id="checkbox-signin" />
+                <label class="form-check-label text-muted ms-1" for="checkbox-signin" i18n>Remember
+                    me</label>
+            </div>
+
+            <div class="mb-0 text-center d-grid">
+                <button class="btn btn-primary" type="submit" i18n>Log In</button>
+            </div>
+        </form>
+
+        <div class="py-3 text-center"><span class="fs-13 fw-bold" i18n>OR</span>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <a [routerLink]="['.']" class="btn btn-white w-100">
+                    <i data-feather="github" class='icon icon-xs me-2'></i>Github
+                </a>
+            </div>
+        </div>
+
+    </ng-container>
+
+    <p class="text-muted" footerLink i18n>Don't have an account? <a [routerLink]="['../signup']"
+            class="text-primary fw-semibold ms-1">Sign Up</a>
+    </p>
+</app-auth-layout>

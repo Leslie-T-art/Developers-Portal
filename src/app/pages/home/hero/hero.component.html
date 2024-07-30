@@ -1,0 +1,45 @@
+<section class="position-relative hero-13 overflow-hidden pt-7 pt-lg-6 pb-5">
+    <div class="container">
+        <div class="row align-items-center text-center text-sm-start">
+            <div class="col-lg-6">
+                <div class="mb-lg-0">
+
+                    <ngx-typed-js [typeSpeed]="60" [backSpeed]="60" [backDelay]="1000" [loop]="true"
+                        [strings]="['saas^500', 'mobile app^500', 'software^500', 'startup^500', 'agency^500', 'portfolio^500', 'coworking^500', 'crypto^500', 'marketing^500']">
+                        <h1 class="hero-title">A modern look and feel for your
+                            <span class="typing highlight highlight-success d-inline-block"></span>
+                        </h1>
+                    </ngx-typed-js>
+
+                    <p class="fs-18 text-muted pt-3">
+                        Make your website or web application stand out with high-quality landing pages designed and
+                        developed by
+                        professionals.
+                    </p>
+
+                    <div class="pt-3 pt-sm-5 mb-4 mb-lg-0">
+                        <a [routerLink]="['.']" fragment="demos" class="btn btn-primary" data-toggle="smooth-scroll">
+                            View Demos
+                            <span class="ms-2 icon icon-xxs" data-feather="arrow-down"></span>
+                        </a>
+                        <a [routerLink]="['../docs/introduction']"
+                            class="btn btn-link text-primary fw-semibold ms-2">Documentation</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1 hero-right">
+                <div class="img-container">
+                    <div class="slider">
+                        <swiper [config]="config" class="swiper-container">
+                            <ng-template swiperSlide *ngFor="let slide of sliderItems">
+                                <div class="swiper-slide-content">
+                                    <img [src]="slide" alt="" class="img-fluid rounded-lg" />
+                                </div>
+                            </ng-template>
+                        </swiper>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

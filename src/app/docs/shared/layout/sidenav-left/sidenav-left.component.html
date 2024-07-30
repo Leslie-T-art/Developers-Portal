@@ -1,0 +1,11 @@
+<div class="px-0 px-sm-4 d-none d-lg-block">
+    <ng-container *ngFor="let menu of menuItems;let i=index">
+        <h5 [class.mt-4]="i!==0">{{menu.label}}</h5>
+        <ul class="nav flex-column">
+            <li class="nav-item" *ngFor="let subitem of menu.children">
+                <a class="nav-link doc-nav-link" [routerLink]="subitem.url"
+                    routerLinkActive="active">{{subitem.label}}</a>
+            </li>
+        </ul>
+    </ng-container>
+</div>

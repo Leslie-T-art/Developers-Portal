@@ -1,0 +1,134 @@
+<div class="row" id="dropdowns">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Dropdowns</h5>
+                <p class="sub-header">
+                    Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown
+                    plugin.
+                </p>
+
+                <div ngbDropdown class="me-2 d-sm-inline-flex mb-2 mb-sm-0">
+                    <button class="btn btn-primary" id="dropdownBasic1" ngbDropdownToggle>Dropdown button<i
+                            class="icon"><span data-feather="chevron-down"></span></i></button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button ngbDropdownItem>Action</button>
+                        <button ngbDropdownItem>Another Action</button>
+                        <button ngbDropdownItem>Something else is here</button>
+                        <div class="dropdown-divider"></div>
+                        <button ngbDropdownItem>Separated link</button>
+                    </div>
+                </div>
+
+                <div class="btn-group" ngbDropdown>
+                    <button type="button" class="btn btn-secondary">Split Button Dropdown</button>
+                    <button class="btn btn-secondary dropdown-toggle-split" ngbDropdownToggle>
+                        <i class="icon"><span data-feather="chevron-down"></span></i>
+                    </button>
+                    <div class="dropdown-menu" ngbDropdownMenu>
+                        <button ngbDropdownItem>Action</button>
+                        <button ngbDropdownItem>Another Action</button>
+                        <button ngbDropdownItem>Something else is here</button>
+                        <div class="dropdown-divider"></div>
+                        <button ngbDropdownItem>Separated link</button>
+                    </div>
+                </div>
+
+                <p class="sub-header mt-4">Dropdown menu position variations</p>
+                <div ngbDropdown class="d-sm-inline-flex me-1 mb-2 mb-sm-0" placement="bottom-end">
+                    <button class="btn btn-success" id="dropdownRightAlignment" ngbDropdownToggle>Right Align <i
+                            class="icon"><span data-feather="chevron-down"></span></i></button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownRightAlignment">
+                        <button ngbDropdownItem>Action</button>
+                        <button ngbDropdownItem>Another Action</button>
+                        <button ngbDropdownItem>Something else is here</button>
+                    </div>
+                </div>
+
+                <div ngbDropdown placement="end-top" class="btn-group me-1 dropend mb-2 mb-sm-0">
+                    <button class="btn btn-info" id="dropdownEnd" ngbDropdownToggle>Drop End <i class="icon"><span
+                                data-feather="chevron-right"></span></i></button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownEnd">
+                        <button ngbDropdownItem>Action</button>
+                        <button ngbDropdownItem>Another Action</button>
+                        <button ngbDropdownItem>Something else is here</button>
+                        <div class="dropdown-divider"></div>
+                        <button ngbDropdownItem>Separated link</button>
+                    </div>
+                </div>
+
+                <div ngbDropdown placement="start-top" class="btn-group dropstart me-1">
+                    <button class="btn btn-danger" id="dropdownEnd" ngbDropdownToggle>
+                        <i class="icon"><span data-feather="chevron-left"></span></i> Drop Start
+                    </button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownEnd">
+                        <button ngbDropdownItem>Action</button>
+                        <button ngbDropdownItem>Another Action</button>
+                        <button ngbDropdownItem>Something else is here</button>
+                        <div class="dropdown-divider"></div>
+                        <button ngbDropdownItem>Separated link</button>
+                    </div>
+                </div>
+
+                <div ngbDropdown class="hovered me-2 d-inline-flex" #myDrop="ngbDropdown">
+                    <button class="btn btn-primary" id="dropdownRightAlignment" ngbDropdownAnchor
+                        (mouseover)="myDrop.open()" (mouseout)="myDrop.close()">
+                        On Hover <i class="icon"><span data-feather="chevron-down"></span></i>
+                    </button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownRightAlignment">
+                        <button ngbDropdownItem>Action</button>
+                        <button ngbDropdownItem>Another Action</button>
+                        <button ngbDropdownItem>Something else is here</button>
+                        <div class="dropdown-divider"></div>
+                        <button ngbDropdownItem>Separated link</button>
+                    </div>
+                </div>
+
+                <p class="sub-header mt-4">
+                    You can put a form or simple text within a dropdown menu or set the different position
+                </p>
+
+                <div ngbDropdown class="btn-group me-1  mb-2 mb-sm-0">
+                    <button class="btn btn-primary" id="dropdownMenutext" ngbDropdownToggle>
+                        Simple text <i class="icon"><span data-feather="chevron-down"></span></i>
+                    </button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownMenutext" class="dropdown-menu-lg p-3">
+                        <div class="text-muted">
+                            <p>Some example text that's free-flowing within the dropdown menu.</p>
+                            <p class="mb-0">And this is more example text.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div ngbDropdown class="btn-group me-1" #formDrop="ngbDropdown">
+                    <button class="btn btn-secondary" type="button" ngbDropdownToggle>Dropdown
+                        menu Forms <i class="icon"><span data-feather="chevron-down"></span></i>
+                    </button>
+                    <form ngbDropdownMenu class="dropdown-menu-lg p-3">
+                        <div class="mb-3">
+                            <label for="exampleDropdownFormEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleDropdownFormEmail"
+                                placeholder="email@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleDropdownFormPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword"
+                                placeholder="Password">
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                                <label class="form-check-label" for="dropdownCheck2">Remember me</label>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" (click)="formDrop.close()">Sign
+                            in</button>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end col -->
+</div>

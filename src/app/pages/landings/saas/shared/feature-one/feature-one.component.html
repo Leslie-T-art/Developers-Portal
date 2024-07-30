@@ -1,0 +1,97 @@
+<section [class]="containerClass">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <span class="badge rounded-pill badge-soft-primary px-2 py-1">Features</span>
+                <h1 class="display-5 fw-medium">Better Management. Better Performance</h1>
+                <p class="text-muted mx-auto">
+                    Start working with <span class="text-primary fw-bold">Prompt</span> to manage your workforce better
+                </p>
+            </div>
+        </div>
+
+        <div class="row pt-5 align-items-center features-3">
+            <div class="col-lg-6">
+                <div class="img-content position-relative">
+                    <div class="img-up mb-lg-0 mb-6">
+                        <img src="assets/images/hero/saas1.jpg" alt="app img" class="img-fluid d-block rounded"
+                            data-aos="fade-right" data-aos-duration="200" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1">
+                <div class="accordion" id="features-list" data-aos="fade-up" data-aos-duration="300">
+                    <div class="d-flex border-bottom pb-4">
+                        <span
+                            class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary me-3 flex-shrink-0">
+                            <i data-feather="users" class="icon-dual-primary"></i>
+                        </span>
+                        <div class="flex-grow-1">
+                            <a href="javascript:void(0)" class="text-dark h4"
+                                (click)="collapse1.toggle();tab2=true;tab3=true;" [attr.aria-expanded]="!tab1">Improve
+                                Employee
+                                Experience
+                            </a>
+
+                            <div class="collapse show" #collapse1="ngbCollapse" [(ngbCollapse)]="tab1">
+                                <p class="text-muted mt-1 mb-4">
+                                    Before we dive into why companies must invest in employee experience (EX), it’s
+                                    important to
+                                    understand what this concept entails.
+                                </p>
+                                <a [routerLink]="['.']" class="h6 text-primary">Learn more
+                                    <i class="ms-1 icon-xxs" data-feather="arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex border-bottom py-4">
+                        <span
+                            class="bg-soft-success avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-success me-3 flex-shrink-0">
+                            <i data-feather="user-plus" class="icon-dual-success"></i>
+                        </span>
+                        <div class="flex-grow-1">
+                            <a href="javascript:void(0)" class="text-dark h4"
+                                (click)="collapse2.toggle();tab1=true;tab3=true;" [attr.aria-expanded]="!tab2">Hiring
+                                &amp;
+                                Onboarding
+                            </a>
+
+                            <div class="collapse" #collapse2="ngbCollapse" [(ngbCollapse)]="tab2">
+                                <p class="text-muted mt-1 mb-4">
+                                    Post your job, interview candidates and make offers, all on Prompt. Start hiring
+                                    today.
+                                </p>
+                                <a [routerLink]="['.']" class="h6 text-primary">Learn more
+                                    <i class="ms-1 icon-xxs" data-feather="arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex pt-4">
+                        <span
+                            class="bg-soft-orange avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-orange me-3 flex-shrink-0">
+                            <i data-feather="bar-chart" class="icon-dual-orange"></i>
+                        </span>
+                        <div class="flex-grow-1">
+                            <a href="javascript:void(0)" class="text-dark h4"
+                                (click)="collapse3.toggle();tab1=true;tab2=true;" [attr.aria-expanded]="!tab3">People
+                                Data &amp;
+                                Analytics
+                            </a>
+
+                            <div class="collapse" #collapse3="ngbCollapse" [(ngbCollapse)]="tab3">
+                                <p class="text-muted mt-1 mb-4">
+                                    Finding committed employees is one of public and private organizations’ top
+                                    priorities.
+                                </p>
+                                <a [routerLink]="['.']" class="h6 text-primary">Learn more
+                                    <i class="ms-1 icon-xxs" data-feather="arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

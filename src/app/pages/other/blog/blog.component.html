@@ -1,0 +1,87 @@
+<div class="header-7" style="background: url('assets/images/blog/hero.jpg') no-repeat;">
+    <div class="overlay">
+    </div>
+    <!-- navbar -->
+    <app-navbar-1 navClass="navbar-dark zindex-10" ctaButtonClass="btn-white text-white btn-sm" [fixedWidth]="true">
+    </app-navbar-1>
+    <!-- hero -->
+    <app-blog-hero></app-blog-hero>
+</div>
+
+<!-- listing start -->
+<section class="py-6 position-relative">
+    <div class="container">
+        <div class="row justify-content-lg-between">
+            <div class="col-lg-12">
+                <div class="d-flex align-items-center mb-5">
+                    <h5 class="me-2 fw-medium">Tags:</h5>
+                    <div>
+                        <a class="btn btn-sm btn-white mb-1 me-1" [routerLink]="['.']"
+                            *ngFor="let tag of tags">{{tag}}</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="row" data-aos="fade-up" data-aos-duration="300">
+                    <div class="col-lg-8">
+                        <app-blog-post-1 [blogPost]="blogPosts1[0]" cardBodyClass="py-0 ps-2 pe-3"></app-blog-post-1>
+                    </div>
+                    <div class="col-lg-4">
+                        <app-blog-subscription-form></app-blog-subscription-form>
+                    </div>
+                </div>
+
+                <!-- blog post 2 -->
+                <div class="row mt-6" data-aos="fade-up">
+                    <div class="col-lg-4" *ngFor="let post of blogPosts2">
+                        <app-blog-post-2 [blogPost]="post"></app-blog-post-2>
+                    </div>
+                </div>
+
+                <!-- blog post 3 -->
+                <div class="row mt-6" data-aos="fade-up">
+                    <div class="col-lg-8 h-100">
+                        <app-blog-post-1 [blogPost]="blogPosts1[1]" cardClass="h-100" cardBodyClass="p-0 px-2">
+                        </app-blog-post-1>
+                    </div>
+                    <div class="col-lg-4">
+                        <app-widget-blog-post-3 badgeText="Resource" badgeVariant="danger"
+                            blogImg="assets/images/blog/post3.jpg"
+                            blogTitle="Top 10 ideas to improve the team productivity" [avatarGroup]="avatarGroup">
+                        </app-widget-blog-post-3>
+                    </div>
+                </div>
+
+                <!-- blog post 4 -->
+                <div class="row mt-6" data-aos="fade-up">
+                    <div class="col-lg-4" *ngFor="let post of blogPosts2">
+                        <app-blog-post-2 [blogPost]="post"></app-blog-post-2>
+                    </div>
+                </div>
+                <!-- blog post end -->
+
+
+                <!-- pagination -->
+                <div class="row mt-5">
+                    <div class="col-lg-12">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a class="btn btn-sm btn-white" href="javascript:void(0)"><i
+                                    class="icon icon-xxs icon-left-arrow me-2"></i>Previous</a>
+                            <a class="btn btn-sm btn-white ms-2" href="javascript:void(0)">Next<i
+                                    class="icon-xxs icon-right-arrow ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+<app-footer-2></app-footer-2>
+
+<!-- back to top -->
+<a class="btn btn-soft-primary shadow-none btn-icon btn-back-to-top" href="javascript:void(0)" appScrollToTop><i
+        class="icon-xxs" data-feather="arrow-up"></i></a>

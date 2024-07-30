@@ -1,0 +1,37 @@
+<div class="row" id="alerts">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Alerts</h5>
+                <p class="sub-header">
+                    Provide contextual feedback messages for typical user actions with the handful of available and
+                    flexible alert messages.
+                </p>
+                <div class="row">
+                    <div class="col-xxl-6">
+                        <ngb-alert *ngFor="let color of alertVariants1;let i=index" [type]="'white'"
+                            (closed)="closeAlert(color)" class="text-{{color}} border"
+                            [class.mb-xxl-0]="i===alertVariants1.length-1">
+                            <div class="d-flex align-items-start">
+                                <span class="badge badge-soft-{{color}} align-self-center me-3">
+                                    {{color | titlecase}}
+                                </span>
+                                <div class="w-100">A simple {{color}} alert—check it out!</div>
+                            </div>
+                        </ngb-alert>
+                    </div>
+                    <div class="col-xxl-6">
+                        <ngb-alert *ngFor="let color of alertVariants2;let i=index" [type]="color"
+                            [dismissible]="false">
+                            This is a {{color}} alert—check it out!
+                        </ngb-alert>
+                        <ngb-alert *ngFor="let color of alertVariants3;let i=index" [type]="color"
+                            (closed)="closeFilledAlert(color)" [class.mb-0]="i===alertVariants3.length-1">
+                            This is a {{color}} alert—check it out!
+                        </ngb-alert>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex">
+                    <img [src]="user?.avatar" class="img-fluid avatar-sm rounded-sm me-3" alt="..." />
+                    <div class="flex-grow-1">
+                        <h4 class="mb-1 mt-0 fs-16">{{user?.name}}</h4>
+                        <p class="text-muted pb-0 fs-14">{{user?.title}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto text-end">
+                <div ngbDropdown placement="bottom-end">
+                    <a class="btn-link text-muted arrow-none" href="javascript:void(0)" id="dropdownMenuLink-1"
+                        ngbDropdownToggle>
+                        <i class="icon icon-xs" data-feather="more-horizontal"></i>
+                    </a>
+                    <div ngbDropdownMenu aria-labelledby="dropdownMenuLink-1">
+                        <a ngbDropdownItem [routerLink]="['.']"><i class="icon-xxs icon me-2"
+                                data-feather="edit"></i>Edit</a>
+                        <a ngbDropdownItem [routerLink]="['.']"><i class="icon-xxs icon me-2"
+                                data-feather="refresh-cw"></i>Refresh</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="text-danger" ngbDropdownItem [routerLink]="['.']"><i class="icon-xxs icon me-2"
+                                data-feather="trash-2"></i>Deactivate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="list-inline py-3 border-bottom">
+            <li class="list-inline-item mb-sm-0 mb-2 me-sm-2">
+                <a [routerLink]="['.']" class="text-muted fs-14"><i class="icon-xs icon me-1"
+                        data-feather="mail"></i>{{user?.email}}</a>
+            </li>
+            <li class="list-inline-item mb-sm-0 mb-2">
+                <a [routerLink]="['.']" class="text-muted fs-14"><i class="icon-xxs icon me-2"
+                        data-feather="phone"></i>{{user?.phone}}</a>
+            </li>
+        </ul>
+
+        <div class="row align-items-center pt-1">
+            <div class="col-md-6">
+                <p class="float-end mb-0">{{projectCompletion}}%</p>
+                <h6 class="fw-medium my-0">Project Completion</h6>
+                <ngb-progressbar type="primary" [value]="projectCompletion" height="6px" class="mt-3"></ngb-progressbar>
+            </div>
+            <div class="col-md-6 mt-md-0 mt-4">
+                <p class="float-end mb-0">{{rating}}</p>
+                <h6 class="fw-medium my-0">Overall Rating</h6>
+                <ngb-progressbar type="orange" [value]="rating" [max]="10" height="6px" class="mt-3"></ngb-progressbar>
+            </div>
+        </div>
+    </div>
+</div>

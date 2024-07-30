@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card" id="spinners">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Spinners</h5>
+                <p class="sub-header">
+                    Indicate the loading state of a component or page with Bootstrap spinners, built entirely with HTML,
+                    CSS, and no JavaScript.
+                </p>
+
+                <div>
+                    <div *ngFor="let variant of variants" class="spinner-border text-{{variant}} m-2" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+
+                <p class="sub-header mt-4">
+                    If you don't fancy a border spinner, switch to the grow spinner. While it doesn't technically spin,
+                    it does
+                    repeatedly grow!
+                </p>
+
+                <div>
+                    <div *ngFor="let variant of variants" class="spinner-grow text-{{variant}} m-2" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

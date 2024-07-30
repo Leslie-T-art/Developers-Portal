@@ -1,0 +1,69 @@
+<app-docs-layout>
+    <div class="col-xl-10 col-lg-9">
+        <div class="row">
+            <div class="col-12">
+                <div class="card" id="customization">
+                    <div class="card-body">
+                        <h4 class="my-0">Routing</h4>
+                        <p>Prompt Angular is having routing setup based on <a href="https://angular.io/guide/router"
+                                target="_blank">Angular-Router</a>.
+                            The pre configured routing would make your job easy when dealing with any
+                            routing related changes. The routing is setup in a way to support <a
+                                href="https://angular.io/guide/lazy-loading-ngmodules">lazy loading</a> as
+                            well.
+                        </p>
+                        <p>You can easily add, change or remove any route by simply making changes described
+                            below:
+                        </p>
+
+                        <div>
+                            <ol>
+                                <li>
+                                    <p>Enable routing in the project using <code>--routing</code> while creating
+                                        project.</p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Add the entry for component in
+                                        main application routing
+                                        <code>src/app/app-routing.module.ts</code> E.g.
+                                    </p>
+                                    <p><code>
+                                       {{'{'}}<br />
+                                            path: 'agency',<br/>
+                                            canActivate: [AuthGuard],<br />
+                                            loadChildren: () => import('./agency/agency.module').then(m => m.AgencyModule) //to load lazily<br />
+                                            or<br />
+                                            component: AgencyComponent <br />
+                                            
+                                        {{'}'}}
+                                      </code>
+                                    </p>
+                                    <p>Each of these properties are explained below:</p>
+                                    <ul>
+                                        <li><strong>path</strong> - relative path to component</li>
+                                        <li><strong>loadChildren</strong> - module to load on this route</li>
+                                        <li><strong>component</strong> - component to load on this route</li>
+                                        <li><strong>canActivate</strong> - set of Guards which decides whether route can
+                                            be actiavted or not. It restrict the non authenticated user to access this
+                                            module.</li>
+                                    </ul>
+
+                                </li>
+                            </ol>
+                            <ngb-alert type="primary" class="border-0" [dismissible]="false">
+                                Note that
+                                you don't need
+                                to restart
+                                the development server in order to see the menu changes getting in
+                                effect
+                            </ngb-alert>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-docs-layout>

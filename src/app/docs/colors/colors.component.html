@@ -1,0 +1,74 @@
+<app-docs-layout>
+    <div class="col-xl-10 col-lg-9">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="my-0">Colors</h4>
+                        <p class="sub-header">
+                            These are primary theme colors. They are used for all the elements
+                            including buttons, alerts, background, etc.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-md-4 col-xl-2 text-center" *ngFor="let color of colors">
+                                <div [class]="'p-5 rounded bg-'+color"></div>
+                                <h6>{{color | titlecase}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="my-0">Background</h4>
+                        <p class="sub-header">
+                            Use the contexual class to have background with different shades.
+                            E.g. <code>.bg-{{'{'}}primary|secondary|success|danger|info|warning{{'}'}}</code>
+                        </p>
+
+                        <div class="row">
+                            <div class="col-xl-2 col-md-4 text-center" *ngFor="let color of colors">
+                                <div [class]="'p-3 rounded  mb-2 mb-xl-0 bg-'+color">
+                                    <h5 class="text-white">.bg-{{color}}</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="sub-header mt-4">
+                            Each color has a translucent shade too. It adds a little transparency.
+                            E.g. <code>.bg-soft-{{'{'}}primary|secondary|success|danger|info|warning{{'}'}}</code>
+                        </p>
+                        <div class="row">
+                            <div class="col-xl-2 col-md-4 text-center" *ngFor="let color of colors">
+                                <div [class]="'p-2 rounded mb-2 mb-xl-0 bg-soft-'+color">
+                                    <h5 [class]="'text-'+color">.bg-soft-{{color}}</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="my-0">Text Colors</h4>
+                        <p class="sub-header">
+                            Even your text can have the contexual color.
+                            E.g. <code>.text-{{'{'}}primary|secondary|success|danger|info|warning{{'}'}}</code>
+                        </p>
+
+                        <div class="row">
+                            <div class="col-xl-2 col-md-4 text-center" *ngFor="let color of colors">
+                                <div class="bg-white p-2 rounded">
+                                    <h5 [class]="'text-'+color">.text-{{color}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-docs-layout>

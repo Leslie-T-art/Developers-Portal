@@ -1,0 +1,91 @@
+<div class="row" id="accordions">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Accordions</h5>
+                <p class="sub-header">
+                    Toggle the visibility of content across your project with a few classes and our
+                    JavaScript plugins.
+                </p>
+
+                <ngb-accordion #acc1="ngbAccordion" activeIds="ngb-panel-1" [closeOthers]="true"
+                    class="custom-accordionwitharrow mt-3">
+                    <ngb-panel id="ngb-panel-1" cardClass="card mb-1 shadow-none border">
+                        <ng-template ngbPanelTitle>
+                            <h5 class="my-1">
+                                What is Lorem Ipsum?
+                                <i class="icon-xs accordion-arrow" data-feather="chevron-down"></i>
+                            </h5>
+                        </ng-template>
+
+                        <ng-template ngbPanelContent>
+                            <div class="card-body text-muted pt-1">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                nesciunt you probably haven't heard of them accusamus labore
+                                sustainable VHS.
+                            </div>
+                        </ng-template>
+
+                    </ngb-panel>
+                    <ngb-panel id="ngb-panel-2" cardClass="card mb-1 shadow-none border">
+                        <ng-template ngbPanelTitle>
+                            <h5 class="my-1">
+                                Why do we use it?
+                                <i class="icon-xs accordion-arrow" data-feather="chevron-down"></i>
+                            </h5>
+                        </ng-template>
+
+                        <ng-template ngbPanelContent>
+                            <div class="card-body text-muted pt-1">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                nesciunt you probably haven't heard of them accusamus labore
+                                sustainable VHS.
+                            </div>
+                        </ng-template>
+
+                    </ngb-panel>
+
+                    <ngb-panel id="ngb-panel-3" cardClass="card mb-0 shadow-none border">
+                        <ng-template ngbPanelTitle>
+                            <h5 class="my-1">
+                                Where does it come from?
+                                <i class="icon-xs accordion-arrow" data-feather="chevron-down"></i>
+                            </h5>
+                        </ng-template>
+
+                        <ng-template ngbPanelContent>
+                            <div class="card-body text-muted pt-1">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                nesciunt you probably haven't heard of them accusamus labore
+                                sustainable VHS.
+                            </div>
+                        </ng-template>
+
+                    </ngb-panel>
+                </ngb-accordion>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+<section class="section pt-lg-8 pb-lg-4 pt-4 pb-3 position-relative" id="contact-me-form">
+    <div class="container testimonials-3">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="600">
+                <h1 class="display-5 fw-medium">Just say hi.</h1>
+                <p>
+                    I am open to discuss your next project, improve user experience of an existing one or help with your
+                    UX/UI design challenges.
+                </p>
+
+                <div class="mt-5 text-muted">Email me at</div>
+                <div>
+                    <h4 class="mt-0 fw-medium">
+                        <a href="mailto:support@coderthemes.com">hello@coderthemes.com</a>
+                    </h4>
+                </div>
+
+                <div class="mt-5 text-muted">Social</div>
+                <ul class="list-inline mt-1">
+                    <li class="list-inline-item me-3">
+                        <a [routerLink]="['.']"><i class="icon-sm icon-dual" data-feather="dribbble"></i></a>
+                    </li>
+                    <li class="list-inline-item me-3">
+                        <a [routerLink]="['.']"><i class="icon-sm icon-dual" data-feather="facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item me-3">
+                        <a [routerLink]="['.']"><i class="icon-sm icon-dual" data-feather="twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item me-3">
+                        <a [routerLink]="['.']"><i class="icon-sm icon-dual" data-feather="linkedin"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a [routerLink]="['.']"><i class="icon-sm icon-dual" data-feather="instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="900">
+                <form class="form-main mt-5 mt-lg-0" [formGroup]="ctaForm" (ngSubmit)="onSubmit()">
+
+                    <div class="row">
+                        <div class="mb-3 col-12">
+                            <input class="form-control" id="name2" name="name" placeholder="Your name" type="text"
+                                formControlName="name" required
+                                [ngClass]="{'is-invalid':formSubmitted && formValues['name'].invalid}" />
+
+                            <div *ngIf="formSubmitted && formValues['name'].invalid" class="invalid-feedback">
+                                <div *ngIf="formValues['name'].errors?.['required']">
+                                    Please enter name
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3 col-12">
+                            <input class="form-control" id="email2" name="email" type="text"
+                                placeholder="Your email where we can reach" formControlName="email" required
+                                [ngClass]="{'is-invalid':formSubmitted && formValues['email'].invalid}" />
+
+                            <div *ngIf="formSubmitted && formValues['email'].invalid" class="invalid-feedback">
+
+                                <div *ngIf="formValues['email'].errors?.['required']">
+                                    Please enter email
+                                </div>
+                                <div *ngIf="formValues['email'].errors?.['email']">
+                                    Email is not a valid Email Address
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-12">
+                            <input class="form-control" id="subject1" name="subject" placeholder="Subject" type="text"
+                                formControlName="subject">
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="mb-3 col-12">
+                            <textarea class="form-control" id="message2" name="message" rows="5"
+                                placeholder="Write your message here. Keep it simple, concise and intriguing!"
+                                formControlName="message" required
+                                [ngClass]="{'is-invalid':formSubmitted && formValues['message'].invalid}"></textarea>
+
+                            <div *ngIf="formSubmitted && formValues['message'].invalid" class="invalid-feedback">
+                                <div *ngIf="formValues['message'].errors?.['required']">
+                                    Please enter message
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col text-end">
+                            <button type="submit" class="btn btn-danger" id="send">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

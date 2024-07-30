@@ -1,0 +1,33 @@
+<div class="row" id="pagination">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Pagination</h5>
+                <p class="sub-header">
+                    Examples for showing pagination to indicate a series of related content exists across multiple pages
+                </p>
+
+                <ngb-pagination [collectionSize]="30" [(page)]="page1" aria-label="Default pagination">
+                    <ng-template ngbPaginationPrevious>Previous</ng-template>
+                    <ng-template ngbPaginationNext>Next</ng-template>
+                </ngb-pagination>
+
+                <p class="sub-header mt-4">
+                    You can use icon instead of showing text label for previous and next actions
+                </p>
+
+                <ngb-pagination [collectionSize]="30" [(page)]="page2" aria-label="Arrow pagination"></ngb-pagination>
+
+                <p class="sub-header mt-4">
+                    Just add class modifier <code>.pagination-rounded</code> to <code>.pagination</code> in order to
+                    have rounded page
+                    action link
+                </p>
+
+                <ngb-pagination [collectionSize]="30" [(page)]="page3" aria-label="Rounded pagination"
+                    class="pagination-rounded">
+                </ngb-pagination>
+            </div>
+        </div>
+    </div>
+</div>

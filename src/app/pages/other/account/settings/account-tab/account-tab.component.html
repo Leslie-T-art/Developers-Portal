@@ -1,0 +1,170 @@
+<h4 class="mt-3 mt-lg-0">Account Information</h4>
+
+<form [formGroup]="accountForm" (ngSubmit)="onSubmit()" class="account-form">
+
+    <!-- avatar start -->
+    <h6 class="mt-4">Your Avatar</h6>
+    <div class="row align-items-center">
+        <div class="col-auto">
+            <img src="assets/images/avatars/img-8.jpg" class="img-fluid avatar-md rounded-circle shadow" alt="..." />
+        </div>
+        <div class="col">
+            <a [routerLink]="['.']" class="btn btn-outline-primary btn-sm">Upload</a>
+            <a [routerLink]="['.']" class="btn btn-outline-danger btn-sm ms-2">Remove</a>
+        </div>
+    </div>
+    <!-- avatar end -->
+
+    <hr class="my-4" />
+
+    <!-- basic info start -->
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name<small>*</small></label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" name="name"
+                    formControlName="name" required
+                    [ngClass]="{'is-invalid':formSubmitted && formValues['name'].invalid}" />
+
+                <div *ngIf="formSubmitted && formValues['name'].invalid" class="invalid-feedback">
+                    <div *ngIf="formValues['name'].errors?.['required']">
+                        Please enter name
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email<small>*</small></label>
+                <input type="email" class="form-control" id="email" placeholder="Email" name="email"
+                    formControlName="email" required
+                    [ngClass]="{'is-invalid':formSubmitted && formValues['email'].invalid}" />
+
+                <div *ngIf="formSubmitted && formValues['email'].invalid" class="invalid-feedback">
+
+                    <div *ngIf="formValues['email'].errors?.['required']">
+                        Please enter email
+                    </div>
+                    <div *ngIf="formValues['email'].errors?.['email']">
+                        Email is not a valid Email Address
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="mb-3">
+                <label for="display_name" class="form-label">Display name</label>
+                <input type="text" class="form-control" id="display_name" aria-describedby="display_name"
+                    placeholder="Display Name" name="display_name" formControlName="displayName" required
+                    [ngClass]="{'is-invalid':formSubmitted && formValues['displayName'].invalid}" />
+
+                <div *ngIf="formSubmitted && formValues['displayName'].invalid" class="invalid-feedback">
+                    <div *ngIf="formValues['displayName'].errors?.['required']">
+                        Please enter display name
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Phone<small>*</small></label>
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone number"
+                    formControlName="phone" required
+                    [ngClass]="{'is-invalid':formSubmitted && formValues['phone'].invalid}" />
+
+                <div *ngIf="formSubmitted && formValues['phone'].invalid" class="invalid-feedback">
+                    <div *ngIf="formValues['phone'].errors?.['required']">
+                        Please enter phone number
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- basic info end -->
+
+    <hr class="my-2" />
+
+    <!-- privacy settings start -->
+    <div class="row my-3">
+        <div class="col-lg-12">
+            <div class="mb-3">
+                <label class="form-label">Profile Visibility</label>
+
+                <div class="mt-1">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="visibilityPublic" name="profileVisibility"
+                            value="public" formControlName="profileVisibility">
+                        <label class="form-check-label" for="visibilityPublic">Public</label>
+                    </div>
+
+                    <div class="form-check form-check-inline ms-3">
+                        <input type="radio" class="form-check-input" name="profileVisibility" id="visibilityPrivate"
+                            formControlName="profileVisibility" value="private">
+                        <label class="form-check-label" for="visibilityPrivate">Private</label>
+                    </div>
+                </div>
+
+                <small class="form-text text-muted mt-2">
+                    Making your profile public means anyone can see your information
+                </small>
+            </div>
+        </div>
+        <div class="col-lg-12 mt-2">
+            <div class="mb-3 mb-0">
+                <label class="form-label">Contact Info
+                    Visibility</label>
+
+                <div class="mt-1">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="visibilityPublic1" name="infoVisibility"
+                            formControlName="infoVisibility" value="public">
+                        <label class="form-check-label" for="visibilityPublic1">Public</label>
+                    </div>
+
+                    <div class="form-check form-check-inline ms-3">
+                        <input type="radio" class="form-check-input" name="infoVisibility" id="visibilityPrivate1"
+                            formControlName="infoVisibility" value="private">
+                        <label class="form-check-label" for="visibilityPrivate1">Private</label>
+                    </div>
+                </div>
+
+                <small class="form-text text-muted mt-2">
+                    Making your contact info public means anyone can see your email and phone number
+                </small>
+            </div>
+        </div>
+    </div>
+    <!-- privacy settings end -->
+
+    <hr class="mb-2" />
+
+    <!-- account removal start -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row align-items-center my-2">
+                <div class="col">
+                    <label class="form-label mb-0">
+                        Remove account
+                    </label>
+                    <small class="form-text text-muted">
+                        By removing your account you will lose all your data
+                    </small>
+                </div>
+                <div class="col-lg-auto text-end">
+                    <button type="button" class="btn btn-outline-danger btn-sm">Remove Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- account removal end -->
+
+    <hr class="my-4" />
+
+    <!-- save start -->
+    <div class="row mt-2">
+        <div class="col-lg-12">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+    </div>
+    <!-- save end -->
+</form>

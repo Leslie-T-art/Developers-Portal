@@ -1,0 +1,33 @@
+<section class="py-5 mt-2 position-relative" id="job-openings">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="display-5 fw-semibold">Job Openings</h1>
+                <p class="text-muted mx-auto">
+                    Interested? Come show us what you're made of!
+                </p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <h3 class="mb-2">Engineering</h3>
+                <ul class="list-unstyled mb-5 pb-4">
+                    <li class="py-4 border-bottom" *ngFor="let vacancy of filterByCategory('Engineering')">
+                        <div class="float-end ms-4"><a [routerLink]="['.']" class="text-muted">{{vacancy.type}}</a>
+                        </div>
+                        <a [routerLink]="['.']" class="h5 fw-medium my-0">{{vacancy.designation}}</a>
+                    </li>
+                </ul>
+
+                <h3 class="text-dark mb-2">Marketing</h3>
+                <ul class="list-unstyled h5 fw-medium my-0">
+                    <li class="py-4 border-bottom" *ngFor="let vacancy of filterByCategory('Marketing')">
+                        <div class="float-end ms-4"><a [routerLink]="['.']" class="text-muted">{{vacancy.type}}</a>
+                        </div>
+                        <a [routerLink]="['.']" class="h5 fw-medium my-0">{{vacancy.designation}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

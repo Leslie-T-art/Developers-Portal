@@ -1,0 +1,37 @@
+<section class="my-lg-5 py-5 marketing-3 position-relative">
+    <div class="container">
+        <div class="row align-items-center" data-aos="fade-up">
+            <div class="col-lg-7">
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <span
+                            class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary mb-4">
+                            <i data-feather="settings" class="icon-dual-primary"></i>
+                        </span>
+                        <h1 class="display-5 fw-semibold">Advanced Features</h1>
+                        <p class="text-muted my-4">
+                            Aenean sagittis tellus lacus, nec aliquet mi gravida at. Aenean velit purus, consectetur ut
+                            lobortis ac, dignissim id mi.
+                        </p>
+
+                        <a [routerLink]="['.']" class="h6 text-primary my-0">Learn more <i class="ms-2 icon-xxs"
+                                data-feather="arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 offset-lg-1">
+                <div class="card border rounded shadow mt-4 mt-lg-0">
+                    <div class="p-5">
+                        <h6 class="fw-medium fs-15 mb-4" *ngFor="let feature of features">
+                            <i class="icon-xs icon-dual-success me-2" data-feather="check-circle"></i>{{feature}}
+                        </h6>
+                        <h6 class="fw-medium fs-15 mb-0">
+                            <i class="icon-xs icon-dual-success me-2" data-feather="arrow-right"></i>And More
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

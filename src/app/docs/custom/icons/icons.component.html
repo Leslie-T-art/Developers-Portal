@@ -1,0 +1,64 @@
+<div class="row" id="icons">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Icons</h5>
+                <p class="sub-header">
+                    Prompt comes with
+                    <a href="https://feathericons.com/" target="_blank">Feather Icons</a>. Feather is a collection of
+                    simply beautiful svg based open source icons. Each icon is
+                    designed with an emphasis on
+                    simplicity, consistency, and flexibility.
+                    To use an icon on your page, add a <code>data-feather</code> attribute with the icon name to
+                    an element.
+                </p>
+
+                <!-- feather icons -->
+                <div>
+                    <div class="row pt-3">
+                        <div class="col-md-auto">
+                            <i *ngFor="let icon of featherIcons;let i=index" [attr.data-feather]="icon"
+                                [class.me-2]="i!==featherIcons.length-1"></i>
+                        </div>
+                    </div>
+                    <p class="sub-header mt-4">
+                        For a complete list of icons, check
+                        <a href="https://feathericons.com/" target="_blank" class="text-primary">here</a>.
+                    </p>
+
+                </div>
+                <p class="sub-header mt-4">
+                    Use modifier class <code>.icon-dual</code> to convert it into two-tone. All the color
+                    variations are available as
+                    well. E.g.
+                    <code>icon-dual-{{'{'}}primary|secondary|success|danger|info|warning{{'}'}}.</code>
+                </p>
+
+                <div class="row">
+                    <div class="col-auto">
+                        <i data-feather="activity" class="icon-dual me-2"></i>
+                        <i data-feather="shopping-bag" class="icon-dual-primary me-2"></i>
+                        <i data-feather="credit-card" class="icon-dual-secondary me-2"></i>
+                        <i data-feather="message-square" class="icon-dual-success me-2"></i>
+                        <i data-feather="map-pin" class="icon-dual-danger me-2"></i>
+                        <i data-feather="bell" class="icon-dual-info me-2"></i>
+                        <i data-feather="calendar" class="icon-dual-warning"></i>
+                    </div>
+                </div>
+
+                <p class="sub-header mt-4">
+                    Use size modifier class <code>.icon-{{'{'}}xxs|xs|sm|md|lg|xl|xxl{{'}'}}</code> to change
+                    the
+                    size.
+                </p>
+
+                <div class="row">
+                    <div class="col-auto">
+                        <i *ngFor="let size of iconSizes" data-feather="message-circle" class="icon-{{size}} me-2"></i>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

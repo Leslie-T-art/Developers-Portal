@@ -1,0 +1,43 @@
+<!-- navbar -->
+<app-navbar-4 [fixedWidth]="true" navClass="navbar-light shadow"></app-navbar-4>
+<!-- page content -->
+<section class="position-relative overflow-hidden bg-gradient2 py-3 px-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-title">
+                    <h3 class="mb-0">Hi Greeva</h3>
+                    <p class="mt-1 fw-medium">Welcome to Prompt!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-lg-5">
+                <!-- profile widget -->
+                <app-dashboard-profile-widget [user]="loggedInUser" [projectCompletion]="85" [rating]="7.5">
+                </app-dashboard-profile-widget>
+            </div>
+            <div class="col-lg-3">
+                <!-- stats widget -->
+                <app-dashboard-stat-widget icon="check-circle" variant="success" [stats]="21" title="Tasks Completed">
+                </app-dashboard-stat-widget>
+                <app-dashboard-stat-widget icon="edit-3" variant="info" [stats]="21" title="Tasks Inprogress">
+                </app-dashboard-stat-widget>
+            </div>
+            <div class="col-lg-4">
+                <!-- revenue widget -->
+                <app-dashboard-revenue-widget></app-dashboard-revenue-widget>
+            </div>
+        </div>
+
+        <!-- recent projects -->
+        <app-dashboard-projects [projects]="projects"></app-dashboard-projects>
+        <!-- tasks -->
+        <app-dashboard-tasks [tasks]="tasks"></app-dashboard-tasks>
+
+
+    </div>
+</section>
+
+<!-- footer -->
+<app-footer-3></app-footer-3>

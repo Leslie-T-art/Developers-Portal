@@ -1,0 +1,29 @@
+<section class="py-7 mt-5 position-relative bg-gradient2">
+    <div class="divider top d-none d-sm-block"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <span class="badge rounded-pill badge-soft-primary px-2 py-1">Our Beliefs</span>
+                <h1 class="display-5 fw-semibold">Our Culture</h1>
+                <p class="text-muted mx-auto">
+                    At Prompt, We believe in a fully balanced personal and professional life, importance of focus, fun,
+                    self-motivation and full transparency.
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <div class="row" data-aos="fade-up">
+                <div class="col-lg-6" *ngFor="let image of gallery; let i=index">
+                    <a href="javascript:void(0)">
+                        <div class="card shadow rounded-sm">
+                            <div class="card-body p-1">
+                                <img [src]="image.thumb" (click)="openLightbox(i)" alt="" class="img-fluid rounded-sm">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

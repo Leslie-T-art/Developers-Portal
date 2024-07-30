@@ -1,0 +1,32 @@
+<section class="my-5 py-6 bg-gradient2 position-relative">
+    <div class="container" data-aos="fade-up" data-aos-duration="1500">
+        <div class="row">
+            <div class="col text-center">
+                <span class="badge rounded-pill badge-soft-primary px-2 py-1">Integrations</span>
+                <h1 class="display-5 fw-medium">Sync your data anywhere</h1>
+                <p class="text-muted mx-auto">
+                    Sync your campaigns or other marketing data <span class="text-primary fw-bold">anywhere</span>.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-6" *ngFor="let integration of integrations">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex text-align-start">
+                            <img class="me-4 align-self-center flex-shrink-0" [src]="integration.appLogo" alt=""
+                                height="60" />
+                            <div class="flex-grow-1">
+                                <h5 class="mt-0">{{integration.app}}</h5>
+                                <p class="mb-0">
+                                    {{integration.description}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

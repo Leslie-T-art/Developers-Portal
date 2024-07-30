@@ -1,0 +1,71 @@
+<section class="section py-lg-5 py-4 mb-5 mb-sm-0 position-relative">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <span class="badge rounded-pill badge-soft-success px-2 py-1">Latest</span>
+                <h1 class="display-5 fw-semibold">Featured Work</h1>
+                <p class="text-muted">Explore some of our latest website projects</p>
+            </div>
+        </div>
+
+        <div class="row features-6" data-aos="fade-up" data-aos-duration="600">
+            <div class="col-lg-6" *ngFor="let project of projects | slice:0:projects.length/2">
+                <div class="bg-gray-50 ps-5 pt-5 mt-4 mt-sm-5 rounded feature-item">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <h3 class="text-dark my-0">{{project.title}}</h3>
+                        </div>
+                        <div class="col text-end pe-5">
+                            {{project.description}}
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <img [src]="[project.image]" alt="" class="img-fluid shadow rounded" />
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a [routerLink]="['.']" class="btn btn-secondary btn-sm btn-view shadow-lg">
+                            View Project <i class="icon-xs ms-2" data-feather="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row features-6" data-aos="fade-up" data-aos-duration="800">
+            <div class="col-lg-6" *ngFor="let project of projects | slice:projects.length/2">
+                <div class="bg-gray-50 ps-5 pt-5 mt-4 mt-sm-5 rounded feature-item">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <h3 class="text-dark my-0">{{project.title}}</h3>
+                        </div>
+                        <div class="col text-end pe-5">
+                            {{project.description}}
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <img [src]="[project.image]" alt="" class="img-fluid shadow rounded" />
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a [routerLink]="['.']" class="btn btn-secondary btn-sm btn-view shadow-lg">
+                            View Project <i class="icon-xs ms-2" data-feather="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-6 justify-content-center">
+            <div class="col-auto">
+                <a [routerLink]="['.']" class="btn btn-outline-secondary mb-2">
+                    Explore All Work<i class="icon-xxs ms-2" data-feather="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

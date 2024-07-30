@@ -1,0 +1,46 @@
+<div class="row" id="progressbars">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Progress</h5>
+                <p class="sub-header">
+                    Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text
+                    labels
+                </p>
+                <div>
+                    <ngb-progressbar [value]="0" class="mb-3"></ngb-progressbar>
+                    <ngb-progressbar [value]="33" class="mb-3"></ngb-progressbar>
+                    <ngb-progressbar type="success" [value]="66" class="mb-3"></ngb-progressbar>
+                    <ngb-progressbar type="danger" [value]="100" class="mb-3"></ngb-progressbar>
+                    <ngb-progressbar type="info" [value]="25" [showValue]="true"></ngb-progressbar>
+                </div>
+
+                <div class="mt-4">
+                    <p class="sub-header">
+                        Add <code>striped</code> attribute to any <code>progress-bar</code> to apply a stripe via
+                        CSS gradient over
+                        the progress bar's background color.
+                        Additionally you can add <code>animated</code> attribute to make it animated as well.
+                    </p>
+
+                    <div>
+                        <ngb-progressbar [value]="10" [striped]="true" class="mb-3"></ngb-progressbar>
+                        <ngb-progressbar [value]="75" [striped]="true" [animated]="true"></ngb-progressbar>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p class="sub-header">
+                        Set a height attribute on the <code>progress</code>. The inner <code>progress-bar</code> will
+                        automatically resize
+                        accordingly.
+                    </p>
+
+                    <div>
+                        <ngb-progressbar [value]="25" height="2px" class="mb-3"></ngb-progressbar>
+                        <ngb-progressbar [value]="25" height="16px"></ngb-progressbar>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

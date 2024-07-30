@@ -1,0 +1,20 @@
+<div class="header-7">
+    <!-- navbar -->
+    <app-navbar-3 navClass="navbar-light zindex-10" ctaButtonClass="btn-secondary btn-sm" [fixedWidth]="true">
+    </app-navbar-3>
+    <!-- hero -->
+    <app-hero-4></app-hero-4>
+</div>
+<!-- clients -->
+<app-startup-clients></app-startup-clients>
+<!-- features -->
+<app-startup-features></app-startup-features>
+<!-- integrations -->
+<app-startup-integrations [integrations]="integrations"></app-startup-integrations>
+<!-- pricing -->
+<app-startup-pricing [planFeatures]="planFeatures"></app-startup-pricing>
+<!-- cta & footer -->
+<app-startup-footer></app-startup-footer>
+<!-- back to top -->
+<a class="btn btn-soft-primary shadow-none btn-icon btn-back-to-top" href="javascript:void(0)" appScrollToTop><i
+        class="icon-xxs" data-feather="arrow-up"></i></a>

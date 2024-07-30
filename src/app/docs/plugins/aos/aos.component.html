@@ -1,0 +1,23 @@
+<div class="row" id="aos">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-0">AoS</h5>
+                <p class="sub-header">
+                    Animate on scroll library.
+                </p>
+                <div class="py-3">
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6" *ngFor="let item of [1000,2000]">
+                            <div class="border rounded p-3 mb-2 mb-xl-0" data-aos="fade-up"
+                                [attr.data-aos-duration]="item">
+                                <app-feature-widget icon="mail" iconBg="primary" title="First feature" description="A itaque earum rerum a tenetur the sapiente
+                                    delectus aut reiciendis alias omnis natus."></app-feature-widget>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

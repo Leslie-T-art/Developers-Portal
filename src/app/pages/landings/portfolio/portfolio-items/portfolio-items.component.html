@@ -1,0 +1,99 @@
+<section class="py-lg-5 pb-5 pt-2 position-relative">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col text-start">
+                <h1 class="display-5 fw-medium">Latest Projects</h1>
+            </div>
+
+            <div class="col-auto">
+                <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills pe-0 me-0 aling-items-center">
+                    <li [ngbNavItem]="'design'">
+                        <a ngbNavLink class="rounded-pill">UI/UX Design</a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="Projects"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="'branding'">
+                        <a ngbNavLink class="rounded-pill">Branding</a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="Projects"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="'marketing'">
+                        <a ngbNavLink class="rounded-pill">Marketing</a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="Projects"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="'web'">
+                        <a ngbNavLink class="rounded-pill">Web Development</a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="Projects"></ng-template>
+                        </ng-template>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-lg-12">
+                <div [ngbNavOutlet]="nav" class="mt-2"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<ng-template #Projects>
+
+    <div class="row features-6" data-aos="fade-up" data-aos-duration="600">
+        <div class="col-lg-6" *ngFor="let project of projects | slice:0:projects.length/2">
+            <div class="bg-light ps-5 pt-5 mb-4 mb-sm-5 rounded feature-item">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <h3 class="text-dark mt-0">{{project.title}}</h3>
+                    </div>
+                    <div class="col text-end pe-5">
+                        {{project.description}}
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <img [src]="[project.image]" alt="" class="img-fluid shadow rounded" />
+                    </div>
+                </div>
+                <div class="overlay">
+                    <a [routerLink]="['.']" class="btn btn-danger btn-sm btn-view shadow-lg">
+                        View Project <i class="icon-xs ms-2" data-feather="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row features-6" data-aos="fade-up" data-aos-duration="800">
+        <div class="col-lg-6" *ngFor="let project of projects | slice:projects.length/2">
+            <div class="bg-light ps-5 pt-5 mb-4 mb-sm-5 rounded feature-item">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <h3 class="text-dark mt-0">{{project.title}}</h3>
+                    </div>
+                    <div class="col text-end pe-5">
+                        {{project.description}}
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <img [src]="[project.image]" alt="" class="img-fluid shadow rounded" />
+                    </div>
+                </div>
+                <div class="overlay">
+                    <a [routerLink]="['.']" class="btn btn-danger btn-sm btn-view shadow-lg">
+                        View Project <i class="icon-xs ms-2" data-feather="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</ng-template>

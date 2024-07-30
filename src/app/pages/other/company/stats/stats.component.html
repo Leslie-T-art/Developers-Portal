@@ -1,0 +1,23 @@
+<section class="pt-8 pb-6 mb-4 mt-lg-4 bg-light position-relative" data-aos="fade-up">
+    <div class="divider top d-none d-sm-block"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <span class="badge rounded-pill badge-soft-info px-2 py-1">Stats</span>
+                <h1 class="display-5 fw-medium">Prompt In Numbers</h1>
+                <p class="text-muted mx-auto"></p>
+            </div>
+        </div>
+        <div class="row mt-5 text-center">
+            <div class="col-6 col-md-3 mb-4 mb-sm-0" *ngFor="let item of statistics">
+                <div class="display-4 fw-normal">
+                    <span [countUp]="item.stats" [options]="item.options"></span>
+                </div>
+                <p class="mt-2 mb-0 fw-semibold">
+                    {{item.title}}
+                </p>
+                <p>{{item.subTitle}}</p>
+            </div>
+        </div>
+    </div>
+</section>

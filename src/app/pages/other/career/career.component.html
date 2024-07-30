@@ -1,0 +1,21 @@
+<div class="bg-gradient2 position-relative">
+    <!-- navbar -->
+    <app-navbar-1 navClass="navbar-light zindex-10" ctaButtonClass="btn-outline-secondary btn-sm" [fixedWidth]="true">
+    </app-navbar-1>
+    <!-- hero -->
+    <app-career-hero></app-career-hero>
+</div>
+
+<!-- benifits-->
+<app-career-benefits [benifits]="benifits"></app-career-benefits>
+<!-- culture -->
+<app-career-culture [gallery]="gallery"></app-career-culture>
+<!-- openings -->
+<app-career-openings [vacancies]="vacancies"></app-career-openings>
+<!-- cta -->
+<app-career-cta></app-career-cta>
+<!-- footer -->
+<app-footer-1></app-footer-1>
+<!-- back to top -->
+<a class="btn btn-soft-primary shadow-none btn-icon btn-back-to-top" href="javascript:void(0)" appScrollToTop><i
+        class="icon-xxs" data-feather="arrow-up"></i></a>

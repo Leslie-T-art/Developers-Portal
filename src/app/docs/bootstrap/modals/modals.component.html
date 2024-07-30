@@ -1,0 +1,239 @@
+<div class="row" id="modals">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Modals</h5>
+                <p class="sub-header">
+                    A modal plugin allows to add dialogs to your site for lightboxes, user notifications, or completely
+                    custom content, etc.
+                </p>
+
+                <div class="row">
+                    <div class="col">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-soft-primary mb-2 mb-sm-0"
+                            (click)="open(standardModal)">Standard modal</button>
+
+                        <!-- Extra large modal -->
+                        <button type="button" class="btn btn-soft-secondary ms-0 ms-sm-5 mb-2 mb-sm-0"
+                            (click)="openModalWithSize(sizeableModal,'xl')">Extra large</button>
+
+                        <!-- Large modal -->
+                        <button type="button" class="btn btn-soft-success ms-0 ms-sm-2"
+                            (click)="openModalWithSize(sizeableModal,'lg')">Large</button>
+
+                        <!-- Small modal -->
+                        <button type="button" class="btn btn-soft-info ms-2"
+                            (click)="openModalWithSize(sizeableModal,'sm')">Small</button>
+
+                    </div>
+                    <!-- Col End -->
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col">
+                        <p class="sub-header">
+                            Add <code>centered</code> property to vertically center
+                            the modal.
+                        </p>
+                        <button type="button" class="btn btn-soft-primary"
+                            (click)="openVerticallyCentered(verticalModal)">Vertically center</button>
+                    </div>
+                </div>
+
+
+                <div class="row mt-4">
+                    <div class="col">
+                        <p class="sub-header">
+                            You can also create a scrollable modal that allows scroll the modal body by adding
+                            <code>scrollable</code> property.
+                        </p>
+                        <button type="button" class="btn btn-soft-primary"
+                            (click)="openScrollableModal(scrollableModal)">Scrollable</button>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col">
+                        <p class="sub-header">
+                            A modal can be used to show contexual messages including success, error, warning,
+                            information messages, etc.
+                        </p>
+                        <button type="button" class="btn btn-soft-success ms-2"
+                            (click)="openAlertModal(alertSuccessModal)">Success</button>
+                        <button type="button" class="btn btn-soft-danger ms-2"
+                            (click)="openAlertModal(alertErrorModal)">Error</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal start -->
+<ng-template #standardModal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Add more storage</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        </button>
+    </div>
+    <div class="modal-body">
+        <h5>You are out of storage space.</h5>
+        <p>To upload more data, please add additional storage space.</p>
+        <form class="d-flex text-align-center">
+            <label class="my-auto me-2" for="selectSize">Select Size: </label>
+            <select class="form-select my-1 me-sm-2 w-50" id="selectSize">
+                <option selected>Choose...</option>
+                <option value="1">1 GB</option>
+                <option value="10">10 GB</option>
+                <option value="50">50 GB</option>
+                <option value="100">100 GB</option>
+                <option value="500">500 GB</option>
+                <option value="1000">1 TB</option>
+            </select>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-white" (click)="modal.close('Close click')">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="modal.close('Close click')">Upgrade</button>
+    </div>
+</ng-template>
+
+<ng-template #sizeableModal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modalLabel">Modal Heading</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+
+        </button>
+    </div>
+    <div class="modal-body">
+        ...
+    </div>
+</ng-template>
+
+<ng-template #scrollableModal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
+            egestas
+            eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus
+            vel augue
+            laoreet rutrum faucibus dolor auctor.</p>
+        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque
+            nisl
+            consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
+            egestas
+            eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus
+            vel augue
+            laoreet rutrum faucibus dolor auctor.</p>
+        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque
+            nisl
+            consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
+            egestas
+            eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus
+            vel augue
+            laoreet rutrum faucibus dolor auctor.</p>
+        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque
+            nisl
+            consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
+            egestas
+            eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus
+            vel augue
+            laoreet rutrum faucibus dolor auctor.</p>
+        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque
+            nisl
+            consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
+            egestas
+            eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus
+            vel augue
+            laoreet rutrum faucibus dolor auctor.</p>
+        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque
+            nisl
+            consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
+            egestas
+            eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus
+            vel augue
+            laoreet rutrum faucibus dolor auctor.</p>
+        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque
+            nisl
+            consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-white" (click)="modal.close('Close click')">Close</button>
+        <button type="button" class="btn btn-primary" (click)="modal.close('Close click')">Save
+            changes</button>
+    </div>
+</ng-template>
+
+<ng-template #verticalModal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="myCenterModalLabel">Center modal</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        </button>
+    </div>
+    <div class="modal-body">
+        <h5>Overflowing text to show scroll behavior</h5>
+        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo
+            odio, dapibus ac facilisis in, egestas eget quam. Morbi leo
+            risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <p class="mb-0">Praesent commodo cursus magna, vel scelerisque nisl
+            consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
+            faucibus dolor auctor.</p>
+    </div>
+</ng-template>
+
+<ng-template #alertSuccessModal let-modal>
+    <div class="modal-header border-bottom-0 pb-0">
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        </button>
+    </div>
+    <div class="modal-body text-center pt-0">
+        <span class="icon icon-lg text-success">
+            <i data-feather="check-circle" class="icon-dual-success"></i>
+        </span>
+        <h4 class="text-success mt-0">Awesome!</h4>
+        <p class="mx-auto text-muted">We receieved your application and will process it shortly.</p>
+        <div class="mt-4">
+            <a href="javascript:void(0)" class="btn btn-white btn-sm" (click)="modal.close('Close click')">
+                <i data-feather="arrow-left" class="icon-xxs me-1"></i>Back
+            </a>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #alertErrorModal let-modal>
+    <div class="modal-header border-bottom-0 pb-0">
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        </button>
+    </div>
+    <div class="modal-body text-center pt-0">
+        <span class="icon icon-lg text-danger">
+            <i data-feather="alert-octagon" class="icon-dual-danger"></i>
+        </span>
+        <h4 class="text-danger mt-0">Something went wrong.</h4>
+        <p class="mx-auto text-muted mt-2">
+            We are unable to process your request at the moment. Our appologies, try back in about 5 minutes.
+        </p>
+        <div class="mt-4">
+            <a href="javascript:void(0)" class="btn btn-white btn-sm" (click)="modal.close('Close click')">
+                <i data-feather="arrow-left" class="icon-xxs me-1"></i>Back
+            </a>
+        </div>
+    </div>
+</ng-template>

@@ -1,0 +1,28 @@
+<div class="row" id="count-up">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Count Up</h5>
+                <p class="sub-header">
+                    ngx-countup is a dependency-free, angular plugin for Countup.js that can be used to quickly create
+                    animations that display numerical data in a more interesting way.
+                </p>
+
+                <div class="py-3">
+                    <div class="row text-center">
+                        <div class="col-6 col-md-3 mb-4 mb-sm-0" *ngFor="let item of statistics">
+                            <div class="display-4 fw-light">
+                                <span [countUp]="item.stats" [options]="item.options"></span>
+                            </div>
+                            <p class="mt-2 mb-0 fw-semibold">
+                                {{item.title}}
+                            </p>
+                            <p>{{item.subTitle}}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

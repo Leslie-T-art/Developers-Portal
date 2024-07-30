@@ -1,0 +1,38 @@
+<section class="py-5 position-relative">
+    <div class="container">
+        <div class="row" data-aos="fade-up">
+            <div class="col text-center">
+                <span class="badge rounded-pill badge-soft-orange px-2 py-1">Flexible</span>
+                <h1 class="display-5 fw-medium">Coworking Space Options</h1>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-6 col-xl-4" *ngFor="let option of spaceOptions;let i=index">
+                <div class="card shadow-lg rounded" data-aos="fade-up" [attr.data-aos-duration]="(i+(3+i))*200">
+                    <img [src]="option.image" alt="" class="card-img-top" />
+                    <div class="card-body">
+                        <div class="">
+                            <h4 class="mt-0"><a [routerLink]="['.']" class="text-orange">{{option.title}}</a></h4>
+                            <p class="text-muted mb-2">
+                                {{option.description}}
+                            </p>
+                        </div>
+                        <div class="pt-3">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <p class="mb-0">
+                                        <i [attr.data-feather]="option.footer.icon"
+                                            class="icon icon-dual icon-xs me-1"></i>
+                                        <a [routerLink]="['.']"
+                                            class="fs-13 align-middle text-muted">{{option.footer.text}}</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

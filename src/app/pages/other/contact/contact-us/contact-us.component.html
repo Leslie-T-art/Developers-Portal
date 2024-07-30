@@ -1,0 +1,138 @@
+<section class="section pb-lg-7 py-4 position-relative">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="card shadow-none">
+                    <div class="card-body p-xl-5 p-0">
+                        <h2 class="mb-2 mt-0 fw-medium">Let's Talk Further</h2>
+                        <p class="mb-5">Please fill out the following form and we will get back to you shortly</p>
+
+                        <form [formGroup]="ctaForm" (ngSubmit)="onSubmit()">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputName1" class="fw-medium form-label">First Name <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="exampleInputName1"
+                                            placeholder="Your First Name" formControlName="fname" required
+                                            [ngClass]="{'is-invalid':formSubmitted && formValues['fname'].invalid}" />
+
+                                        <div *ngIf="formSubmitted && formValues['fname'].invalid"
+                                            class="invalid-feedback">
+                                            <div *ngIf="formValues['fname'].errors?.['required']">
+                                                Please enter first name
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputName" class="fw-medium form-label">Last Name <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="exampleInputName"
+                                            placeholder="Your Last Name" formControlName="lname" required
+                                            [ngClass]="{'is-invalid':formSubmitted && formValues['lname'].invalid}" />
+
+                                        <div *ngIf="formSubmitted && formValues['lname'].invalid"
+                                            class="invalid-feedback">
+                                            <div *ngIf="formValues['lname'].errors?.['required']">
+                                                Please enter last name
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="fw-medium form-label">Email <span
+                                                class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                            placeholder="Your Email" formControlName="email" required
+                                            [ngClass]="{'is-invalid':formSubmitted && formValues['email'].invalid}" />
+
+                                        <div *ngIf="formSubmitted && formValues['email'].invalid"
+                                            class="invalid-feedback">
+
+                                            <div *ngIf="formValues['email'].errors?.['required']">
+                                                Please enter email
+                                            </div>
+                                            <div *ngIf="formValues['email'].errors?.['email']">
+                                                Email is not a valid Email Address
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Message <span
+                                                class="text-danger">*</span></label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                            placeholder="Type Your Massage..." formControlName="message" required
+                                            [ngClass]="{'is-invalid':formSubmitted && formValues['message'].invalid}"></textarea>
+
+                                        <div *ngIf="formSubmitted && formValues['message'].invalid"
+                                            class="invalid-feedback">
+                                            <div *ngIf="formValues['message'].errors?.['required']">
+                                                Please enter message
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">
+                                        Send
+                                        <span class="icon icon-xs text-white">
+                                            <i data-feather="send"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1">
+                <div style="height: 520px">
+                    <div id="marker-map5" class="h-100" leaflet [leafletOptions]="options">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 align-items-center">
+            <div class="col-md-4">
+                <div class="d-flex px-md-1 px-lg-5 mb-md-0 mb-3">
+                    <span
+                        class="bg-soft-primary avatar avatar-sm rounded icon icon-with-bg icon-xs text-primary me-3 flex-shrink-0">
+                        <i data-feather="mail" class="icon-dual-primary"></i>
+                    </span>
+                    <div class="flex-grow-1">
+                        <h5 class="m-0 fw-medium">Email</h5>
+                        <a [routerLink]="['.']" class="text-muted fw-normal h5 my-1">youremail@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex px-md-1 px-lg-5 mb-md-0 mb-3">
+                    <span
+                        class="bg-soft-orange avatar avatar-sm rounded icon icon-with-bg icon-xs text-orange me-3 flex-shrink-0">
+                        <i data-feather="phone-call" class="icon-dual-orange"></i>
+                    </span>
+                    <div class="flex-grow-1">
+                        <h5 class="m-0 fw-medium">Phone</h5>
+                        <a [routerLink]="['.']" class="text-muted fw-normal h5 my-1">+00 123 456 7890</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex px-md-1 px-lg-5 mb-md-0 mb-3">
+                    <span
+                        class="bg-soft-info avatar avatar-sm rounded icon icon-with-bg icon-xs text-info me-3 flex-shrink-0">
+                        <i data-feather="map-pin" class="icon-dual-info"></i>
+                    </span>
+                    <div class="flex-grow-1">
+                        <h5 class="m-0 fw-medium">Address</h5>
+                        <a [routerLink]="['.']" class="text-muted fw-normal h5 my-1">565 Brrom Str, NY</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

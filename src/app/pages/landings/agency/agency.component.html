@@ -1,0 +1,22 @@
+<div class="header-4">
+    <!-- navbar -->
+    <app-navbar-1 navClass="navbar-light" ctaButtonClass="btn-orange btn-sm" [fixedWidth]="true" [sticky]="true">
+    </app-navbar-1>
+    <!-- hero -->
+    <app-hero-5></app-hero-5>
+</div>
+<!-- services -->
+<app-agency-services></app-agency-services>
+<!-- portfolio -->
+<app-agency-portfolio [projects]="projects"></app-agency-portfolio>
+<!-- clients -->
+<app-agency-clients></app-agency-clients>
+<!-- blogs -->
+<app-agency-blogs [blogPosts]="blogPosts"></app-agency-blogs>
+<!-- openings -->
+<app-agency-openings [jobs]="jobs"></app-agency-openings>
+<!-- footer -->
+<app-agency-footer></app-agency-footer>
+<!-- back to top -->
+<a class="btn btn-soft-secondary shadow-none btn-icon btn-back-to-top" href="javascript:void(0)" appScrollToTop><i
+        class="icon-xxs" data-feather="arrow-up"></i></a>

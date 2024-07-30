@@ -1,0 +1,133 @@
+<section class="position-relative pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div>
+                    <h4 class="mb-3">Comments<span class="badge badge-soft-secondary fs-14 align-middle ms-2">3</span>
+                    </h4>
+
+                    <div class="d-flex align-items-top mt-4">
+                        <img class="me-2 rounded-sm" src="assets/images/avatars/img-2.jpg" alt="" height="36">
+                        <div class="flex-grow-1">
+                            <h6 class="m-0">Sansa Stark </h6>
+                            <p class="text-muted mb-0"><small>2 days ago</small></p>
+
+                            <p class="my-1">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                praesentium voluptatum deleniti atque.</p>
+
+                            <div>
+                                <a href="javascript: void(0);" class="btn btn-sm btn-link text-primary fw-medium p-0">
+                                    <i class="icon-xxs icon me-1" data-feather="message-circle"></i>Reply
+                                </a>
+                            </div>
+
+                            <div class="d-flex align-items-top mt-4">
+                                <img class="me-2 rounded-sm" src="assets/images/avatars/img-6.jpg" alt="" height="36">
+                                <div class="flex-grow-1">
+                                    <h6 class="m-0">Cersei Lannister </h6>
+                                    <p class="text-muted mb-0"><small>1 day ago</small></p>
+
+                                    <p class="my-1">Itaque earum rerum hic tenetur sapiente delectus aut reiciendis
+                                        voluptatibus maiores alias consequatur aut perferendis</p>
+                                    <div>
+                                        <a href="javascript: void(0);"
+                                            class="btn btn-sm btn-link text-primary fw-medium p-0">
+                                            <i class="icon-xxs icon me-1" data-feather="message-circle"></i>Reply
+                                        </a>
+                                    </div>
+                                </div> <!-- end flex-body -->
+                            </div> <!-- end flex-->
+                        </div> <!-- end flex-body -->
+                    </div>
+
+                    <!--hr-->
+                    <hr class="my-4" />
+
+                    <div class="d-flex align-items-top mt-4">
+                        <img class="me-2 rounded-sm" src="assets/images/avatars/img-2.jpg" alt="" height="36">
+                        <div class="flex-grow-1">
+                            <h6 class="m-0">Sansa Stark </h6>
+                            <p class="text-muted mb-0"><small>2 days ago</small></p>
+
+                            <p class="my-1">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                praesentium voluptatum deleniti atque.</p>
+
+                            <div>
+                                <a href="javascript: void(0);" class="btn btn-sm btn-link text-primary fw-medium p-0">
+                                    <i class="icon-xxs icon me-1" data-feather="message-circle"></i>Reply
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 mb-lg-0 mb-5">
+                    <div class="card border">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3 mt-0">Post a comment</h4>
+
+                            <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" id="exampleInputName1"
+                                                placeholder="Name" formControlName="name" required
+                                                [ngClass]="{'is-invalid':formSubmitted && formValues['name'].invalid}" />
+
+                                            <div *ngIf="formSubmitted && formValues['name'].invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="formValues['name'].errors?.['required']">
+                                                    Please enter name
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                                placeholder="Email" formControlName="email" required
+                                                [ngClass]="{'is-invalid':formSubmitted && formValues['email'].invalid}" />
+
+                                            <div *ngIf="formSubmitted && formValues['email'].invalid"
+                                                class="invalid-feedback">
+
+                                                <div *ngIf="formValues['email'].errors?.['required']">
+                                                    Please enter email
+                                                </div>
+                                                <div *ngIf="formValues['email'].errors?.['email']">
+                                                    Email is not a valid Email Address
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" id="exampleInputSubject1"
+                                                placeholder="Subject" formControlName="subject" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                                placeholder="Message" formControlName="message" required
+                                                [ngClass]="{'is-invalid':formSubmitted && formValues['message'].invalid}"></textarea>
+
+                                            <div *ngIf="formSubmitted && formValues['message'].invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="formValues['message'].errors?.['required']">
+                                                    Please enter message
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-secondary">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

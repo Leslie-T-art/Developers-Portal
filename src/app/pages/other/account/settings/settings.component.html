@@ -1,0 +1,62 @@
+<!-- navbar -->
+<app-navbar-4 [fixedWidth]="true" navClass="navbar-light shadow"></app-navbar-4>
+<!-- page content -->
+<section class="position-relative p-3 bg-gradient2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-title">
+                    <h3 class="my-0">Account Settings</h3>
+                    <p class="mt-1 fw-medium">Change your account settings</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <!-- menu start -->
+                                <ul ngbNav #nav1="ngbNav" [(activeId)]="activeTab"
+                                    class="navtab-bg nav-pills flex-column">
+                                    <li [ngbNavItem]="'account'">
+                                        <a ngbNavLink>
+                                            <span>Account</span>
+                                        </a>
+                                        <ng-template ngbNavContent>
+                                            <app-settings-account-tab></app-settings-account-tab>
+                                        </ng-template>
+                                    </li>
+                                    <li class="my-2" [ngbNavItem]="'password'">
+                                        <a ngbNavLink>
+                                            <span>Password</span>
+                                        </a>
+                                        <ng-template ngbNavContent>
+                                            <app-settings-password-tab></app-settings-password-tab>
+                                        </ng-template>
+                                    </li>
+                                    <li class="nav-item" [ngbNavItem]="'notification'">
+                                        <a ngbNavLink>
+                                            <span>Notifications</span>
+                                        </a>
+                                        <ng-template ngbNavContent>
+                                            <app-settings-notification-tab></app-settings-notification-tab>
+                                        </ng-template>
+                                    </li>
+                                </ul>
+                                <!-- menu end -->
+                            </div>
+                            <div class="col-lg-9">
+                                <div [ngbNavOutlet]="nav1" class="p-0 px-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+<app-footer-3></app-footer-3>

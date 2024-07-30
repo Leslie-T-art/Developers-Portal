@@ -1,0 +1,36 @@
+<section class="my-lg-5 py-5 py-sm-7 bg-gradient2 position-relative" data-aos="fade-up">
+    <div class="divider top d-none d-sm-block"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <span class="badge rounded-pill badge-soft-primary px-2 py-1">Features</span>
+                <h1 class="display-4 fw-semibold">Why Choose Prompt</h1>
+                <p class="text-secondary mx-auto">A modern design, fresh look and feel</p>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-4" data-aos="fade-up" data-duration="600" *ngFor="let feature of features">
+                <div class="card shadow-sm">
+                    <div class="card-body p-2">
+                        <div class="d-flex align-items-center">
+                            <span
+                                class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary me-3 flex-shrink-0">
+                                <i [attr.data-feather]="feature.icon" class="icon-dual-primary"
+                                    *ngIf="feature.icon"></i>
+
+                                <span class="fw-bolder" *ngIf="!feature.icon">{{feature.name[0]}}</span>
+
+
+                            </span>
+
+                            <div class="flex-grow-1">
+                                <h5 class="m-0">{{feature.name}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

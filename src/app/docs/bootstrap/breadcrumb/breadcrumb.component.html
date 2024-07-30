@@ -1,0 +1,36 @@
+<div class="row" id="breadcrumb">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Breadcrumb</h5>
+                <p class="sub-header">
+                    Indicate the current page's location within a navigational hierarchy that
+                    automatically adds separators via CSS.
+                </p>
+
+                <nav aria-label="breadcrumb" *ngFor="let breadcrumbItem of breadcrumbData">
+                    <ol class="breadcrumb">
+                        <ng-container *ngFor="let item of breadcrumbItem">
+                            <li class="breadcrumb-item" *ngIf="!item.active"><a
+                                    [routerLink]="item.path">{{item.label}}</a>
+                            </li>
+                            <li class="breadcrumb-item active" *ngIf="item.active">{{item.label}}</li>
+                        </ng-container>
+                    </ol>
+                </nav>
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a [routerLink]="['.']"><i data-feather="home" class="icon-xs"></i></a>
+                        </li>
+                        <li class="breadcrumb-item"><a [routerLink]="['.']">Library</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                </nav>
+
+
+            </div>
+        </div>
+    </div>
+</div>

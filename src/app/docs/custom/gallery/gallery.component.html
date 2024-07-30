@@ -1,0 +1,77 @@
+<div class="row" id="gallery">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Gallery</h5>
+                <p class="sub-header">
+                    Using <a href="https://github.com/MurhafSousli/ngx-gallery" target="_blank">Angular Gallery</a>
+                    plugin, you can
+                    easily create a gallery of images, videos or other custom items.
+                    It's a fast, light and responsive lightbox plugin.
+                </p>
+
+                <h6 class="mt-4 mb-1">Simple Example</h6>
+
+                <div class="row">
+                    <div class="col-lg-4 col-6" *ngFor="let image of album1; let i=index">
+                        <a href="javascript:void(0)">
+                            <div class="card">
+                                <img [src]="image.thumb" (click)="openSimpleLightbox(i)" alt=""
+                                    class="img-fluid rounded-sm shadow" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <h6 class="mt-4 mb-1">Grid Example</h6>
+                <div>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="card border-0 shadow-none overflow-hidden rounded">
+                                <a href="javascript:void(0)">
+                                    <img src="assets/images/photos/11.jpg" alt="" (click)="openGridLightbox(0)"
+                                        class="img-fluid mx-auto d-block rounded-sm">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="gallery-box card border-0 shadow overflow-hidden rounded-sm">
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/images/photos/5.jpg" alt="" (click)="openGridLightbox(1)"
+                                                class="img-fluid mx-auto d-block">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-box card border-0 shadow overflow-hidden rounded-sm">
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/images/photos/7.jpg" alt="" (click)="openGridLightbox(2)"
+                                                class="img-fluid mx-auto d-block">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="gallery-box card border-0 shadow overflow-hidden rounded-sm">
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/images/photos/8.jpg" alt="" (click)="openGridLightbox(3)"
+                                                class="img-fluid mx-auto d-block">
+                                        </a>
+                                    </div>
+
+                                    <div class="gallery-box card border-0 shadow overflow-hidden rounded-sm">
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/images/photos/10.jpg" alt="" (click)="openGridLightbox(4)"
+                                                class="img-fluid mx-auto d-block">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

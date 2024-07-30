@@ -1,0 +1,7 @@
+<div class="border-left-lg">
+    <ul class="nav flex-column" id="toc-list">
+        <li class="nav-item" *ngFor="let menu of menuItems">
+            <a class="nav-link" [routerLink]='"."' [fragment]="menu.key">{{menu.label}}</a>
+        </li>
+    </ul>
+</div>

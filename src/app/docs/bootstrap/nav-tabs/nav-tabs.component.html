@@ -1,0 +1,142 @@
+<div class="row" id="nav-tabs">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Nav Tabs</h5>
+                <p class="sub-header">
+                    Takes <code>Nav directives</code> to generate a
+                    tabbed interface.
+                </p>
+
+                <ul ngbNav #nav1="ngbNav" [(activeId)]="activeTab1" class="nav-tabs">
+                    <li [ngbNavItem]="'home'">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="icon icon-xxs" data-feather="home"></i></span>
+                            <span class="d-none d-sm-block">Home</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <p>Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean
+                                commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+                                quis enim.</p>
+                            <p class="mb-0">Donec pede justo, fringilla vel, aliquet nec, vulputate
+                                eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                                justo. Nullam dictum felis eu pede mollis pretium. Integer
+                                tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
+                                eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
+                                eleifend ac, enim.</p>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="'profile'">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="icon icon-xxs" data-feather="user"></i></span>
+                            <span class="d-none d-sm-block">Profile</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
+                                enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
+                                dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus.
+                                Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean
+                                leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                            <p class="mb-0">Vakal text here dolor sit amet, consectetuer adipiscing
+                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                                quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                                consequat massa quis enim.</p>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="'messages'">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="icon icon-xxs" data-feather="mail"></i></span>
+                            <span class="d-none d-sm-block">Messages</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <p>Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean
+                                commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+                                quis enim.</p>
+                            <p class="mb-0">Donec pede justo, fringilla vel, aliquet nec, vulputate
+                                eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                                justo. Nullam dictum felis eu pede mollis pretium. Integer
+                                tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
+                                eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
+                                eleifend ac, enim.</p>
+                        </ng-template>
+                    </li>
+                </ul>
+
+                <div [ngbNavOutlet]="nav1" class="p-3 text-muted"></div>
+
+                <p class="sub-header">
+                    Use <code>.nav-pills .nav-justified</code> to generate a
+                    justified pills tabs.
+                </p>
+
+
+                <ul ngbNav #nav2="ngbNav" [(activeId)]="activeTab2" class="nav-pills navtab-bg nav-justified p-1">
+                    <li [ngbNavItem]="'home'">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="icon icon-xxs" data-feather="home"></i></span>
+                            <span class="d-none d-sm-block">Home</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <p>Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean
+                                commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+                                quis enim.</p>
+                            <p class="mb-0">Donec pede justo, fringilla vel, aliquet nec, vulputate
+                                eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                                justo. Nullam dictum felis eu pede mollis pretium. Integer
+                                tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
+                                eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
+                                eleifend ac, enim.</p>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="'profile'">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="icon icon-xxs" data-feather="user"></i></span>
+                            <span class="d-none d-sm-block">Profile</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
+                                enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
+                                dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus.
+                                Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean
+                                leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                            <p class="mb-0">Vakal text here dolor sit amet, consectetuer adipiscing
+                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                                quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                                consequat massa quis enim.</p>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="'messages'">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="icon icon-xxs" data-feather="mail"></i></span>
+                            <span class="d-none d-sm-block">Messages</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <p>Vakal text here dolor sit amet, consectetuer adipiscing elit. Aenean
+                                commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
+                                magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+                                quis enim.</p>
+                            <p class="mb-0">Donec pede justo, fringilla vel, aliquet nec, vulputate
+                                eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                                justo. Nullam dictum felis eu pede mollis pretium. Integer
+                                tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
+                                eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
+                                eleifend ac, enim.</p>
+                        </ng-template>
+                    </li>
+                </ul>
+
+                <div [ngbNavOutlet]="nav2" class="text-muted"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end col -->
+</div>
