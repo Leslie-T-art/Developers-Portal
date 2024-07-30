@@ -1,0 +1,28 @@
+<div class="row" [class]="containerClass ? containerClass : 'mt-5'">
+    <div class="col-lg-4 col-xl-4" *ngFor="let plan of pricingPlans;let i=index">
+        <div class="card border hoverable" [ngClass]="{'position-relative overflow-hidden': plan.popular}"
+            [attr.data-aos]="hasAnimation ?'fade-up' : ''" [attr.data-aos-duration]="hasAnimation ? 500 : 0">
+            <div class="card-body text-center">
+                <span class="ribbon2 bg-primary text-white shadow" *ngIf="plan.popular">Popular</span>
+                <h4 class="my-0 text-primary">{{plan.name}}</h4>
+                <h1 class="mb-0">
+                    <span class="fw-normal text-muted fs-13 align-top me-2">$</span>
+                    <span class="fw-bolder display-5 me-1">{{plan.price}}</span>
+                    <span class="fw-normal text-muted fs-13 align-middle"> / {{plan.duration ?
+                        plan.duration : 'month'}}</span>
+                </h1>
+
+                <ul class="list-unstyled border-top py-4 mt-4 text-start">
+                    <li class="py-2 d-flex align-items-center" *ngFor="let feature of plan.features">
+                        <i class="icon icon-xs text-success align-middle me-2" data-feather="check"></i>
+                        <span>{{feature}}</span>
+                    </li>
+                </ul>
+
+                <a [routerLink]="['.']" class="d-block"
+                    [class]="plan.recommended ? 'btn btn-primary' : 'btn btn-soft-primary'">Purchase
+                    Now</a>
+            </div>
+        </div>
+    </div>
+</div>
