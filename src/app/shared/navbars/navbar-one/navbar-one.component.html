@@ -1,0 +1,38 @@
+<header>
+    <nav class="navbar navbar-expand-lg topnav-menu" [class]="navClass" [attr.id]="sticky ? 'sticky' : 'navbar-1'"
+        appStickyNav>
+        <div [class]="fixedWidth ? 'container' : 'container-fluid'">
+            <a class="navbar-brand logo" routerLink="/">
+                <img src="assets/images/logo.png" height="30" class="align-top logo-dark" alt="" />
+                <img src="assets/images/logo-light.png" height="30" class="align-top logo-light" alt="" />
+            </a>
+            <button class="navbar-toggler" type="button" (click)="collapse.toggle()"
+                [attr.aria-expanded]="showMobileMenu" aria-controls="topnav-menu-content"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse" id="topnav-menu-content" #collapse="ngbCollapse"
+                [(ngbCollapse)]="!showMobileMenu">
+                <ul class="navbar-nav align-items-lg-center d-flex me-auto">
+
+                    <li *ngIf="!hideSearch">
+                        <form id="search" class="form-inline d-none d-sm-flex">
+                            <div class="form-control-with-hint ms-lg-2 ms-xl-4">
+                                <input type="text" class="form-control" id="search-input"
+                                    placeholder="What are you looking for?" />
+                                <span class="form-control-feedback uil uil-search fs-16"></span>
+                            </div>
+                        </form>
+                    </li>
+
+                </ul>
+
+                <app-menu [showDownload]="true" [ctaButtonClass]="ctaButtonClass ? ctaButtonClass : 'btn-primary'">
+                </app-menu>
+
+            </div>
+        </div>
+    </nav>
+
+</header>
