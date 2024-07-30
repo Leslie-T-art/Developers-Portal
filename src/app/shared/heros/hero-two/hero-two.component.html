@@ -1,0 +1,94 @@
+<section class="hero-2">
+    <div class="container py-3 py-sm-6">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1 class="hero-title mt-0">Explore the best coworking space in the heart of the City</h1>
+            </div>
+            <div class="col-lg-5">
+                <p class="fs-17 ps-0 ps-sm-4">No more conventional four-walled office. The fully comformtable seating
+                    solution for you.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="slider pt-3 pt-sm-5 mt-5">
+                    <!-- slider -->
+                    <div class="form-container">
+                        <div class="row align-items-top px-3 px-sm-5">
+                            <div class="col-lg-12">
+                                <div class="card mb-2">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                <div class="row g-2 align-items-center">
+                                                    <div class="col-sm-auto ">
+                                                        <h5 class="mt-0 fw-medium my-1 my-sm-0 pe-3">Search your perfect
+                                                            space</h5>
+                                                    </div>
+                                                    <div class="col-sm-auto">
+                                                        <label class="visually-hidden" for="location">location</label>
+                                                        <div class="form-control-with-hint me-sm-2">
+                                                            <input type="text" class="form-control" id="location"
+                                                                placeholder="Enter location">
+                                                            <span
+                                                                class="form-control-feedback uil uil-location-pin-alt fs-18"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-auto">
+                                                        <button type="submit" class="btn btn-orange my-1 my-sm-0">Find
+                                                            Space</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-auto text-sm-end pt-2 pt-sm-0">
+                                                <div class="navigations">
+                                                    <button class="btn btn-info swiper-custom-prev me-1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="white"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="feather feather-chevron-left">
+                                                            <polyline points="15 18 9 12 15 6"></polyline>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="btn btn-info swiper-custom-next">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="white"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="feather feather-chevron-right">
+                                                            <polyline points="9 18 15 12 9 6"></polyline>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <swiper [config]="config" class="swiper-container">
+                        <ng-template swiperSlide *ngFor="let slide of sliderItems;let i=index">
+                            <div class="slider-item" [ngStyle]="{ 'background-image': 'url(' + slide + ')'}"></div>
+                        </ng-template>
+                    </swiper>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shape bottom d-none d-sm-block">
+        <svg width="1440px" height="40px" viewBox="0 0 1440 40" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="shape-b" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="curve" fill="#fff">
+                    <path
+                        d="M0,30.013 C239.659,10.004 479.143,0 718.453,0 C957.763,0 1198.28,10.004 1440,30.013 L1440,40 L0,40 L0,30.013 Z"
+                        id="Path"></path>
+                </g>
+            </g>
+        </svg>
+    </div>
+</section>
