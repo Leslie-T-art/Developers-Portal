@@ -1,0 +1,37 @@
+<header>
+    <nav class="navbar navbar-expand-lg topnav-menu" [class]="navClass" [attr.id]="sticky ? 'sticky' : 'navbar-3'"
+        appStickyNav>
+        <div [class]="fixedWidth ? 'container' : 'container-fluid'">
+            <a class="navbar-brand" routerLink="/">
+                <img src="assets/images/logo.png" height="30" class="d-inline-block align-top" alt="" />
+            </a>
+            <a href="javascript:void(0)" class="navbar-toggler" (click)="collapse.toggle()"
+                [attr.aria-expanded]="showMobileMenu" aria-controls="topnav-menu-content3"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </a>
+            <div class="collapse navbar-collapse" id="topnav-menu-content3" #collapse="ngbCollapse"
+                [(ngbCollapse)]="!showMobileMenu">
+
+                <app-menu [showDownload]="false" navClass="mx-auto"
+                    [ctaButtonClass]="ctaButtonClass ? ctaButtonClass : 'btn-primary'" class="mx-auto">
+                </app-menu>
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="btn btn-sm me-2 fw-medium fs-15 shadow-none text-dark" [routerLink]="['/auth/login']"
+                            *ngIf="!loggedInUser">Login</a>
+                        <a class="btn btn-sm me-2 fw-medium fs-15 shadow-none text-dark" [routerLink]="['/auth/logout']"
+                            *ngIf="loggedInUser">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn" [class]="ctaButtonClass ? ctaButtonClass : 'btn-soft-primary'"
+                            [routerLink]="['/']">Download</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
