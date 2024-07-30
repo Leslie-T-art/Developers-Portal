@@ -1,0 +1,18 @@
+<div class="card card-listing-item">
+    <div class="card-img-top-overlay">
+        <div [class]="overlayClass ? 'overlay-'+overlayClass : 'overlay'"></div>
+        <span class="card-badge top-right bg-{{badgeVariant}} text-white">{{badgeText}}</span>
+        <img [src]="blogImg" alt="" class="card-img-top" />
+
+        <div class="card-overlay-bottom">
+            <h2><a [routerLink]="['.']" class="text-white">{{blogTitle}}</a></h2>
+
+            <div class="avatar-group">
+
+                <a [routerLink]="['.']" class="avatar-group-item shadow-lg me-1" *ngFor="let user of avatarGroup">
+                    <img [src]="user.avatar" alt="image" class="img-fluid avatar-xs rounded-circle avatar-border" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
