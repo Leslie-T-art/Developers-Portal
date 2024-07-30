@@ -1,0 +1,46 @@
+<section class="position-relative pb-5">
+    <div class="container">
+        <div class="row border-top border-bottom py-4 align-items-center">
+            <div class="col-md-4 col-sm-6 text-md-start text-center">
+                <a class="btn btn-white me-3" href="javascript:void(0)" placement="top" triggers="mouseenter:mouseleave"
+                    [ngbPopover]="popContentPrev" popoverTitle="" container="body">
+                    <i class="icon-xs icon-left-arrow me-2"></i>
+                    <span class="d-none d-sm-inline">Awesome Saas App</span>
+                </a>
+            </div>
+            <div class="col-md-4 text-md-center">
+                <a class="btn btn-white my-md-0 my-3" [routerLink]="['.']">
+                    View All
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 text-md-end">
+                <a class="btn btn-white" href="javascript:void(0)" placement="top" triggers="mouseenter:mouseleave"
+                    [ngbPopover]="popContentNext" popoverTitle="" container="body">
+                    <span class="d-none d-sm-inline">Desktop App</span>
+                    <i class="icon-xs icon-right-arrow ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<ng-template #popContentPrev>
+    <div class='d-flex align-items-center'>
+        <img src='/assets/images/blog/post1.jpg' width='60' class='me-3 rounded-sm' alt='thumb'>
+        <div class='flex-grow-1'>
+            <h6 class='fs-14 fw-semibold mt-0 mb-1'>Introducing new blazzing fast user interface</h6>
+            <span class='d-block fs-13 text-muted'>by Emily Blunt</span>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #popContentNext>
+    <div class='d-flex align-items-center'>
+        <img src='/assets/images/blog/post2.jpg' width='60' class='me-3 rounded-sm' alt='thumb'>
+        <div class='flex-grow-1'>
+            <h6 class='fs-14 fw-semibold mt-0 mb-1'>Awesome Desktop App</h6>
+            <span class='d-block fs-13 text-muted'>Desktop App</span>
+        </div>
+    </div>
+</ng-template>
