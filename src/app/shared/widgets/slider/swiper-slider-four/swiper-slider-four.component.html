@@ -1,0 +1,23 @@
+<div class="slider">
+    <swiper [config]="config" class="swiper-container">
+        <ng-template swiperSlide *ngFor="let slide of sliderItems">
+            <div class="card mb-0 border rounded">
+                <div class="card-body testimonial-body shadow">
+                    <p class="quotation-mark text-muted mb-0">“</p>
+                    <h4 class="fw-normal mb-3 mt-0">
+                        {{slide.text}}
+                    </h4>
+                    <hr />
+                    <div class="d-flex pt-2 align-items-center">
+                        <img class="me-2 rounded-circle" [src]="slide.customer.avatar" alt="" height="36" />
+                        <div class="flex-grow-1">
+                            <h6 class="m-0">{{slide.customer.name}}</h6>
+                            <p class="my-0 text-muted fs-13">{{slide.customer.designation}}</p>
+                        </div>
+                        <img [src]="slide.logo" alt="" height="32" *ngIf="hasLogo" />
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </swiper>
+</div>
