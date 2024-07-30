@@ -1,0 +1,22 @@
+<app-portfolio-layout heroTitle="Portfolio Masonry" [imageCategory]="imageCategory"
+    (filterByCategory)="filterImages($event)">
+    <ngx-masonry gallery class="masonry-grid position-relative masonry" id="filterable-content"
+        [options]="{itemSelector:'.masonry-item'}">
+        <div ngxMasonryItem class="masonry-item" *ngFor="let item of galleryItems; let i=index">
+            <div class="card card-portfolio-item mb-0 shadow border filter-item">
+                <div class="p-2">
+                    <div class="card-zoom">
+                        <a href="javascript:void(0)" class="image-popup" [title]="item.image?.caption">
+                            <img [src]="item.image?.thumb" (click)="open(i)" class="card-img-top"
+                                [alt]="item.image?.caption">
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body p-2">
+                    <h5 class="mt-2">{{item.title}}</h5>
+                    <p class="text-muted mb-1">{{item.description}}</p>
+                </div>
+            </div>
+        </div>
+    </ngx-masonry>
+</app-portfolio-layout>
