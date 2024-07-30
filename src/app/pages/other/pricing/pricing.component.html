@@ -1,0 +1,20 @@
+<div>
+    <!-- navbar -->
+    <app-navbar-1 navClass="navbar-light zindex-10" ctaButtonClass="btn-outline-secondary btn-sm" [fixedWidth]="true">
+    </app-navbar-1>
+    <!-- hero -->
+    <app-pricing-hero></app-pricing-hero>
+</div>
+<!-- pricing -->
+<app-pricing-plans [pricingPlans]="pricingPlans"></app-pricing-plans>
+<!-- benefits -->
+<app-pricing-benefits [benifits]="benifits"></app-pricing-benefits>
+<!-- faq -->
+<app-pricing-faqs [faqs]="faqs"></app-pricing-faqs>
+<!-- cta -->
+<app-pricing-cta></app-pricing-cta>
+<!-- footer -->
+<app-footer-1></app-footer-1>
+<!-- back to top -->
+<a class="btn btn-soft-primary shadow-none btn-icon btn-back-to-top" href="javascript:void(0)" appScrollToTop><i
+        class="icon-xxs" data-feather="arrow-up"></i></a>
