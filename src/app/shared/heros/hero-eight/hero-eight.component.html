@@ -1,0 +1,48 @@
+<section class="position-relative overflow-hidden hero-7 pt-6 pb-4">
+    <div class="container">
+        <div class="row align-items-center text-center text-sm-start">
+            <div class="col-lg-6">
+                <div class="">
+                    <h1 class="hero-title">Speed up your <span
+                            class="highlight highlight-warning d-inline-block">performance</span></h1>
+                    <p class="fs-16 mt-3 text-muted">
+                        Prompt makes it easier to build better website and application more quickly and with less effort
+                    </p>
+
+                    <div class="py-5">
+                        <div class="btn-group" ngbDropdown>
+                            <button type="button" class="btn btn-primary">
+                                <i data-feather="download" class="icon-xs me-2"></i>Download for Ubuntu 19.04
+                            </button>
+                            <button type="button" class="btn btn-primary dropdown-toggle-split"
+                                id="dropdownMenuReference" ngbDropdownToggle>
+                                <i class="icon"><span data-feather="chevron-down"></span></i>
+                            </button>
+                            <div ngbDropdownMenu class="dropdown-menu-end" aria-labelledby="dropdownMenuReference">
+                                <a ngbDropdownItem [routerLink]="['.']">Windows 7/8/10</a>
+                                <div class="dropdown-divider"></div>
+                                <a ngbDropdownItem [routerLink]="['.']">Mac OS</a>
+                                <div class="dropdown-divider"></div>
+                                <a ngbDropdownItem [routerLink]="['.']">Ubuntu 18.04</a>
+                                <a ngbDropdownItem [routerLink]="['.']">Ubuntu 16.04</a>
+                            </div>
+                        </div>
+                        <div class="rounded d-inline-block mt-3 py-1 px-3 alert bg-soft-warning">
+                            <div class="d-flex align-items-center">
+                                <div class="text-dark">
+                                    Looking for other platforms? <a [routerLink]="['.']"
+                                        class="text-dark fw-medium">Click Here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1 hero-right">
+                <div class="img-container" data-aos="fade-left" data-aos-duration="600">
+                    <img src="assets/images/hero/desktop.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
