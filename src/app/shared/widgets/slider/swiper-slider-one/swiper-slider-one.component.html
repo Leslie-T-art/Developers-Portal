@@ -1,0 +1,19 @@
+<div class="slider">
+    <swiper [config]="config" class="swiper-container">
+        <ng-template swiperSlide *ngFor="let slide of sliderItems">
+            <div class="swiper-slide-content">
+                <div class="row text-center">
+                    <div class="col">
+                        <img [src]="slide.image" alt="" class="w-75" />
+                    </div>
+                </div>
+                <div class="row text-center my-4 pb-5">
+                    <div class="col">
+                        <h5 class="fw-medium fs-16">{{slide.slideTitle}}</h5>
+                        <p class="text-muted">{{slide.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </swiper>
+</div>
