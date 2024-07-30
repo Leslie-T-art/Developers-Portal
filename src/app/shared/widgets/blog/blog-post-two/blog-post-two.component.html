@@ -1,0 +1,39 @@
+<div class="card card-listing-item">
+    <div class="card-img-top-overlay">
+        <div class="overlay"></div>
+        <span class="card-badge top-right bg-{{badgeVariant}} text-white">{{badgeText}}</span>
+        <img [src]="blogImg" alt="" class="card-img-top" />
+
+        <div class="card-overlay-bottom">
+            <a [routerLink]="['.']" class="shadow-lg">
+                <img [src]="autherAvatar" alt="image" class="img-fluid avatar-xs rounded-circle avatar-border me-1" />
+                <h6 class="d-inline text-white">{{authorName}}</h6>
+            </a>
+        </div>
+    </div>
+    <div class="card-body">
+        <div>
+            <h4><a [routerLink]="['.']" class="card-title-link">{{blogTitle}}</a></h4>
+            <p class="text-muted mb-2">
+                {{description}}
+                <a [routerLink]="['.']">read more</a>
+            </p>
+        </div>
+        <div class="pt-3" *ngIf="blogFooter">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <p class="mb-0">
+                        <i data-feather="calendar" class="icon icon-dual icon-xs me-1"></i>
+                        <span class="fs-14 align-middle">{{postDate}}</span>
+                    </p>
+                </div>
+                <div class="col text-end">
+                    <p class="mb-0">
+                        <i data-feather="tag" class="icon icon-dual icon-xs align-bottom me-1"></i>
+                        <span class="fs-14">#{{hashtag}}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
