@@ -1,0 +1,25 @@
+<section class="pt-5 pb-7 career-service position-relative">
+    <div class="container">
+        <div class="row" data-aos="fade-up">
+            <div class="col text-center">
+                <span class="badge rounded-pill badge-soft-primary px-2 py-1">Benefits</span>
+                <h1 class="display-5 fw-semibold">All plans includes these benefits</h1>
+                <p class="text-muted mx-auto">Some benefits of the monthly/yearly subscription</p>
+            </div>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-duration="500">
+            <div class="col-lg-6" *ngFor="let benefit of benifits">
+                <div class="d-flex align-items-center pe-sm-5 pe-3 mt-lg-5 mt-4">
+                    <span
+                        class="bg-soft-primary avatar avatar-md rounded icon icon-with-bg icon-sm text-primary me-4 flex-shrink-0">
+                        <i [attr.data-feather]="benefit.icon" class="icon-dual-primary"></i>
+                    </span>
+                    <div class="flex-grow-1">
+                        <h5 class="mt-0">{{benefit.title}}</h5>
+                        <p class="text-muted mb-0">{{benefit.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
