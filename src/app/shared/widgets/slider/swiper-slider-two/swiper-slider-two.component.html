@@ -1,0 +1,27 @@
+<div class="slider">
+    <swiper [config]="config" class="swiper-container">
+        <ng-template swiperSlide *ngFor="let slide of sliderItems">
+            <div class="card mb-0">
+                <div class="card-body p-md-5">
+                    <p class="fw-normal mb-4 mt-0">
+                        {{slide.text}}
+                    </p>
+                    <div class="d-flex text-align-start">
+                        <img class="me-2 rounded-circle" [src]="slide.customer.avatar" alt="" height="36" />
+                        <div class="flex-grow-1">
+                            <h6 class="m-0">{{slide.customer.name}}</h6>
+                            <p class="my-0 text-muted fs-13">{{slide.customer.designation}}</p>
+                        </div>
+                        <div class="align-self-center">
+                            <i data-feather="star" class="me-1 icon icon-xxs icon-fill-warning text-warning"></i>
+                            <i data-feather="star" class="me-1 icon icon-xxs icon-fill-warning text-warning"></i>
+                            <i data-feather="star" class="me-1 icon icon-xxs icon-fill-warning text-warning"></i>
+                            <i data-feather="star" class="me-1 icon icon-xxs icon-fill-warning text-warning"></i>
+                            <i data-feather="star" class="me-1 icon icon-xxs icon-fill-warning text-warning"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </swiper>
+</div>
