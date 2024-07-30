@@ -1,0 +1,45 @@
+<div>
+    <!-- navbar -->
+    <app-navbar-1 navClass="navbar-light zindex-10" ctaButtonClass="btn-outline-secondary btn-sm" [fixedWidth]="true">
+    </app-navbar-1>
+    <!-- hero -->
+    <app-portfolio-hero [title]="heroTitle"></app-portfolio-hero>
+</div>
+
+<section class="overflow-hidden py-5 py-md-6 py-lg-7">
+    <div class="container">
+
+        <!-- Filter -->
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center filter-menu">
+                    <a href="javascript: void(0);" class="filter-menu-item" [class.active]="imageCategory==='all'"
+                        (click)='filterImages("all")'>All</a>
+                    <a href="javascript: void(0);" class="filter-menu-item" [class.active]="imageCategory==='web'"
+                        (click)='filterImages("web")'>Web Design</a>
+                    <a href="javascript: void(0);" class="filter-menu-item" [class.active]="imageCategory==='graphic'"
+                        (click)='filterImages("graphic")'>Graphic Design</a>
+                    <a href="javascript: void(0);" class="filter-menu-item"
+                        [class.active]="imageCategory==='illustrator'"
+                        (click)='filterImages("illustrator")'>Illustrator</a>
+                    <a href="javascript: void(0);" class="filter-menu-item"
+                        [class.active]="imageCategory==='photography'"
+                        (click)='filterImages("photography")'>Photography</a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <ng-content select="[gallery]"></ng-content>
+        </div>
+        <div class="text-center mt-5 pb-md-0">
+            <a class="btn btn-primary" [routerLink]="['.']"><i data-feather="refresh-ccw" class="icon-xxs me-2"></i>Load
+                More</a>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+<app-footer-1></app-footer-1>
+<!-- back to top -->
+<a class="btn btn-soft-primary shadow-none btn-icon btn-back-to-top" href='javascript: void(0);' appScrollToTop><i
+        class="icon-xxs" data-feather="arrow-up"></i></a>
