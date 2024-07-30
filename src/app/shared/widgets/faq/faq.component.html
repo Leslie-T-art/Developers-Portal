@@ -1,0 +1,19 @@
+<div id="faqContent">
+    <ngb-accordion #acc1="ngbAccordion" activeIds="ngb-panel-0" [closeOthers]="true" class="custom-accordionwitharrow"
+        [class]="containerClass">
+        <ngb-panel cardClass="card mb-2 border rounded-sm" *ngFor="let faq of faqs">
+            <ng-template ngbPanelTitle>
+                <h5 class="my-1 fw-medium">{{faq.question}}
+                    <i class="icon-xs accordion-arrow" data-feather="chevron-down"></i>
+                </h5>
+            </ng-template>
+
+            <ng-template ngbPanelContent>
+                <div class="card-body text-muted pt-1">
+                    {{faq.ans}}
+                </div>
+            </ng-template>
+
+        </ngb-panel>
+    </ngb-accordion>
+</div>
