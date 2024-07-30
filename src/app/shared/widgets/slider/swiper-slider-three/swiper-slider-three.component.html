@@ -1,0 +1,12 @@
+<div class="slider">
+    <swiper [config]="config" class="swiper-container">
+        <ng-template swiperSlide *ngFor="let image of images">
+            <div class="swiper-slide-content">
+                <div class="video-overlay d-flex align-items-center justify-content-center">
+                    <a [routerLink]="['.']" class="btn-play success"></a>
+                </div>
+                <img [src]="image" alt="" class="img-fluid rounded-lg" />
+            </div>
+        </ng-template>
+    </swiper>
+</div>
