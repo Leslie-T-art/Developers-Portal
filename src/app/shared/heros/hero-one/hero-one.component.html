@@ -1,0 +1,71 @@
+<section class="position-relative hero-1 pt-7 pt-sm-6 pb-5">
+    <div class="container hero-container">
+        <div class="row text-center text-md-start">
+            <div class="col-lg-6 pt-2 pt-sm-3">
+                <h1 class="hero-title">
+                    The best way to <span class="highlight highlight-warning d-inline-block">Showcase</span> your Mobile
+                    App
+                </h1>
+
+                <p class="mt-3 fs-17 text-muted">
+                    To increase sales by skyrocketing communication with All messages in one simple dashboard it now
+                    takes seconds.
+                </p>
+
+                <div class="pt-3 pt-sm-5 d-flex align-items-center action-buttons">
+                    <a [routerLink]="['.']" fragment="section-download" class="btn btn-primary">Download</a>
+
+                    <div class="ms-3">
+                        <a class="text-primary d-flex align-items-center" [routerLink]="['.']">
+                            <span type="button"
+                                class="btn btn-soft-primary btn-rounded-circle btn-icon me-2 shadow-none">
+                                <i class="icon-xxs icon-dual-primary align-self-center" data-feather="play"></i>
+                            </span>
+                            <span class="fw-semibold">Watch Video</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 offset-lg-2 text-end">
+                <div class="position-relative">
+                    <div class="hero-img mt-4 mt-sm-0">
+                        <img src="assets/images/hero/app1.png" alt="" class="img-fluid" data-bs-aos="zoom-in-up" />
+                    </div>
+
+                    <div class="slider">
+                        <swiper [config]="config" class="swiper-container">
+                            <ng-template swiperSlide *ngFor="let slide of sliderItems;let i=index">
+                                <div class="swiper-slide-content shadow bg-white rounded-sm p-3 quote">
+                                    <div class="d-flex text-start">
+                                        <img [src]="slide.avatar" alt=""
+                                            class="img-fluid avatar-sm rounded-circle align-self-center me-3" />
+                                        <div class="flex-grow-1 fs-14 text-muted">This app is blessing for all
+                                            professionals!
+                                            <p class="mb-0">
+                                                <span class="ms-0">
+                                                    <i data-feather="star"
+                                                        class="me-1 icon icon-xxs icon-fill-warning text-warning"></i>
+                                                    <i data-feather="star"
+                                                        class="me-1 icon icon-xxs icon-fill-warning text-warning"></i>
+                                                    <i data-feather="star"
+                                                        class="me-1 icon icon-xxs icon-fill-warning text-warning"></i>
+                                                    <i data-feather="star"
+                                                        class="me-1 icon icon-xxs icon-fill-warning text-warning"></i>
+                                                    <i data-feather="star"
+                                                        class="me-1 icon icon-xxs icon-fill-warning text-warning"></i>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </swiper>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
