@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { first } from 'rxjs';
+import { first } from 'rxjs/operators';
 
 // service
 import { AuthenticationService } from 'src/app/core/service/auth.service';
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   });
   formSubmitted: boolean = false;
   error: string = '';
-  returnUrl: string = '/';
+  returnUrl: string = '/pages/account/dashboard'; // Default redirect URL after login
   loading: boolean = false;
 
   constructor (
@@ -35,13 +35,13 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular |  Login into your account");
-    // get return url from route parameters or default to '/'
+    this.titleService.setTitle("Prompt - Angular | Login into your account");
+    // Optionally get return URL from route parameters
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || this.returnUrl;
   }
 
   /**
-   * convenience getter for easy access to form fields
+   * Convenience getter for easy access to form fields
    */
   get formValues() { return this.loginForm.controls; }
 
@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
         .pipe(first())
         .subscribe(
           (data: User) => {
-            this.router.navigate([this.returnUrl]);
+            this.router.navigate([this.returnUrl]); // Redirect to the dashboard after login
           },
           (error: string) => {
             this.error = error;
