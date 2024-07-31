@@ -7,6 +7,7 @@ import { SwiperModule } from 'swiper/angular';
 import { NavbarsModule } from 'src/app/shared/navbars/navbars.module';
 import { UiModule } from 'src/app/shared/ui/ui.module';
 import { HomeRoutingModule } from './home-routing.module';
+import { AccountModule } from '../other/account/account.module'; // Import the AccountModule
 
 // component
 import { AccountPagesComponent } from './account-pages/account-pages.component';
@@ -18,9 +19,6 @@ import { HomeComponent } from './home.component';
 import { InnerPagesComponent } from './inner-pages/inner-pages.component';
 import { LandingPagesComponent } from './landing-pages/landing-pages.component';
 
-
-
-
 @NgModule({
   declarations: [
     HomeComponent,
@@ -30,15 +28,17 @@ import { LandingPagesComponent } from './landing-pages/landing-pages.component';
     CtaComponent,
     AccountPagesComponent,
     InnerPagesComponent,
-    LandingPagesComponent
+    LandingPagesComponent,
+    // Do not declare DashboardComponent here
   ],
   imports: [
     CommonModule,
     NgxTypedJsModule,
     SwiperModule,
     NavbarsModule,
-    UiModule,
-    HomeRoutingModule
+    UiModule, 
+    HomeRoutingModule,
+    AccountModule, // Import the AccountModule
   ]
 })
 export class HomeModule { }
