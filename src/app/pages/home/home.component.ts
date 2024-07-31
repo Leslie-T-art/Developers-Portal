@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Premium Landing Pages");
+    this.titleService.setTitle("Auto-mate | Dashboard");
     this._fetchData();
   }
 
