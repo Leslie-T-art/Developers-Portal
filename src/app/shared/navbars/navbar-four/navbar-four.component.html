@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg topnav-menu" [class]="navClass" [attr.id]="sticky ? 'sticky' : 'navbar-4'"
         appStickyNav>
         <div [class]="fixedWidth ? 'container' : 'container-fluid'">
-            <a class="navbar-brand  me-lg-3 me-auto" routerLink="/">
+            <a class="navbar-brand  me-lg-3 me-auto" routerLink="/pages/account/dashboard">
                 <img src="assets/images/logo.png" height="30" class="d-inline-block align-top" alt="" />
             </a>
 
@@ -16,7 +16,7 @@
 
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item" *ngFor="let menu of topMenu;let i=index" [class.me-3]="i<topMenu.length-1">
-                        <a class="nav-link" routerLink="/" [class.active]="i===0">
+                        <a class="nav-link" routerLink="/pages/account/dashboard" [class.active]="i===0">
                             <div class="d-flex align-items-center">
                                 <span class="icon-xxs me-1 flex-shrink-0">
                                     <i [attr.data-feather]="menu.icon"
@@ -26,6 +26,7 @@
                             </div>
                         </a>
                     </li>
+                    
                 </ul>
 
                 <ul class="navbar-nav align-items-lg-center">
