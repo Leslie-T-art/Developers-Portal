@@ -83,7 +83,7 @@ const PAGESDEMOS: Demo[] = [
     {
         image: 'assets/images/demo/pages/dashboard.jpg',
         url: '/pages/account/dashboard',
-        name: 'Dashboard',
+        name: 'Overview',
     },
     {
         image: 'assets/images/demo/pages/settings.jpg',
