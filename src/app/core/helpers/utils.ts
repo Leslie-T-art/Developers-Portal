@@ -9,16 +9,16 @@ function getAllUsers(): User[] {
     let users: User[] = JSON.parse(sessionStorage.getItem('users')!) || [
         {
             id: 1,
-            username: 'test',
-            email: 'prompt@coderthemes.com',
+            username: 'Leslie',
+            email: 'quickpi@xplug.co.zw',
             password: 'test',
-            firstName: 'Greeva',
-            lastName: 'Navadiya',
-            displayName: 'Greeva N',
+            firstName: 'Leslie',
+            lastName: 'Chihwai',
+            displayName: 'Leslie C',
             avatar: 'assets/images/avatars/img-8.jpg',
-            location: 'California, USA',
-            title: 'Web & Graphic Designer',
-            phone: '+00 123-456-789'
+            location: 'Harare, Zimbabwe',
+            title: 'Web & Graphic Designer, UI/UX',
+            phone: '0785670693'
         }
     ];
     return users;
