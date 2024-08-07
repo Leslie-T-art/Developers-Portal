@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Auto-Mate  | Work automation");
+    this.titleService.setTitle("quickpi  | Work automation");
     this.loggedInUser = this.authService.currentUser();
     this._fetchData();
   }
