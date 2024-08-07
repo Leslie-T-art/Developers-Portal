@@ -18,7 +18,7 @@ import { User } from 'src/app/core/models/auth.models';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup = this.fb.group({
-    email: ['prompt@coderthemes.com', [Validators.required, Validators.email]],
+    email: ['quickpi@xplug.co.zw', [Validators.required, Validators.email]],
     password: ['test', Validators.required]
   });
   formSubmitted: boolean = false;
@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Login into your account");
+    this.titleService.setTitle("quickpi - Angular | Login into your account");
     // Optionally get return URL from route parameters
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || this.returnUrl;
   }
