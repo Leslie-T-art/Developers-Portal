@@ -7,7 +7,7 @@ import * as AOS from 'aos';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'prompt-angular';
+  title = 'quickpi-angular';
 
   ngAfterViewInit(): void {
     AOS.init();
