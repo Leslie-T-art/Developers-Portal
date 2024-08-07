@@ -15,4 +15,5 @@ export interface ProfileOption {
 export interface TopNavItem {
     icon: string;
     name: string;
+    redirectTo: string;
 }
