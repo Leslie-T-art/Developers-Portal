@@ -11,7 +11,7 @@ export class HerosComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular |  Documentation");
+    this.titleService.setTitle("quickpi | work automation");
   }
 
 }
