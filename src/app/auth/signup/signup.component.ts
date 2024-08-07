@@ -33,7 +33,7 @@ export class SignupComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular |  Create a new account ");
+    this.titleService.setTitle("quickpi |  Work automation");
   }
 
   /**
