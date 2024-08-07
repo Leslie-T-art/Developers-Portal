@@ -4,22 +4,28 @@ import { Notification, ProfileOption, TopNavItem } from "./navbar-four.model";
 const TOPMENU: TopNavItem[] = [
     {
         icon: 'grid',
-        name: 'Home'
-    },
+        name: 'Home',
+        redirectTo: '.'},
     {
         icon: 'folder',
+        redirectTo: '/auth/logout',
         name: 'Projects'
     },
     {
         icon: 'list',
+        redirectTo: '/auth/logout',
+
         name: 'Tasks'
     },
     {
         icon: 'bar-chart-2',
+        redirectTo: '/auth/logout',
+
         name: 'Reports'
     },
     {
         icon: 'tool',
+        redirectTo: '/pages/account/settings',
         name: 'Settings'
     }
 ];
