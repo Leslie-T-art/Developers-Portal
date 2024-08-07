@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "prompt-angular": {
+    "quickpi-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -29,7 +29,7 @@
           "options": {
             "localize": false,
             "aot": true,
-            "outputPath": "dist/prompt-angular",
+            "outputPath": "dist/quickpi-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -91,16 +91,16 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "prompt-angular:build:production"
+              "browserTarget": "quickpi-angular:build:production"
             },
             "development": {
-              "browserTarget": "prompt-angular:build:development"
+              "browserTarget": "quickpi-angular:build:development"
             },
             "es": {
-              "browserTarget": "prompt-angular:build:es"
+              "browserTarget": "quickpi-angular:build:es"
             },
             "en": {
-              "browserTarget": "prompt-angular:build:en"
+              "browserTarget": "quickpi-angular:build:en"
             }
           },
           "defaultConfiguration": "development"
@@ -108,7 +108,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "prompt-angular:build"
+            "browserTarget": "quickpi-angular:build"
           }
         },
         "test": {
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "prompt-angular"
+  "defaultProject": "quickpi-angular"
 }
