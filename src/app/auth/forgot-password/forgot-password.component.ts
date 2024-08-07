@@ -21,7 +21,7 @@ export class ForgotPasswordComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular |  Forget Paassword");
+    this.titleService.setTitle("quickpi | Work automation");
   }
 
   /**
