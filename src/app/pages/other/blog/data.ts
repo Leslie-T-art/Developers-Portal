@@ -44,9 +44,9 @@ const BLOGPOSTS2: BlogPost[] = [
     {
         image: 'assets/images/blog/crypto2.jpg',
         tag: { variant: 'success', value: 'Tutorial' },
-        title: 'What you should know before considering the prompt',
+        title: 'What you should know before considering the quicKPI',
         description:
-            'We are giving a pretty extensive guideline and context before you make your decision to consider prompt...',
+            'We are giving a pretty extensive guideline and context before you make your decision to consider quicKPI...',
     },
     {
         image: 'assets/images/blog/crypto1.jpg',
