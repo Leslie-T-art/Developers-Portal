@@ -25,7 +25,7 @@ export class SoftwareComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Software Landing Page");
+    this.titleService.setTitle("quicKPI");
     this._fetchData()
   }
 
