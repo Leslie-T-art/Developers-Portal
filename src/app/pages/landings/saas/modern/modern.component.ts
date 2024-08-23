@@ -26,7 +26,7 @@ export class SaasModernComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Saas Application Landing Page");
+    this.titleService.setTitle("quicKPI - Angular | Saas Application Landing Page");
     this._fetchData();
   }
 
