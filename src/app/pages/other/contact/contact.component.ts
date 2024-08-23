@@ -12,7 +12,7 @@ export class ContactComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Contact Us");
+    this.titleService.setTitle("quicKPI");
   }
 
   ngAfterViewInit(): void {
