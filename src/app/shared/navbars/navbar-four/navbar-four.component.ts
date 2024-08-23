@@ -17,7 +17,7 @@ export class NavbarFourComponent implements OnInit {
   @Input() navClass: string = '';
   @Input() sticky: boolean = false;
 
-  topMenu: TopNavItem[] = []
+  topMenu: TopNavItem[] = [];
   notifications: Notification[] = [];
   profileOptions: ProfileOption[] = [];
 
@@ -35,7 +35,14 @@ export class NavbarFourComponent implements OnInit {
   _fetchData(): void {
     this.topMenu = TOPMENU;
     this.notifications = NOTIFICATIONS;
-    this.profileOptions = PROFILEOPTIONS
+    this.profileOptions = PROFILEOPTIONS;
+  }
+
+  /**
+   * Toggles the mobile menu visibility
+   */
+  toggleMobileMenu(): void {
+    this.showMobileMenu = !this.showMobileMenu;
   }
 
 }
