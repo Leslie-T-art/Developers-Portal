@@ -11,12 +11,14 @@
                 </div>
             </div>
         </div>
+        <br/>
         <div class="row mt-2">
             <div class="col-lg-5">
                 <!-- profile widget -->
                 <app-dashboard-profile-widget [user]="loggedInUser" [projectCompletion]="85" [rating]="7.5">
                 </app-dashboard-profile-widget>
             </div>
+
             <div class="col-lg-3">
                 <!-- stats widget -->
                 <app-dashboard-stat-widget icon="check-circle" variant="success" [stats]="21" title="Tasks Completed">
@@ -31,6 +33,7 @@
         </div>
 
         <!-- recent projects -->
+         <br/>
         <app-dashboard-projects [projects]="projects"></app-dashboard-projects>
         <!-- tasks -->
         <app-dashboard-tasks [tasks]="tasks"></app-dashboard-tasks>
