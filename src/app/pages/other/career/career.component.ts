@@ -24,7 +24,7 @@ export class CareerComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Career");
+    this.titleService.setTitle("quicKPI - Angular | Career");
     this._fetchData();
   }
 
