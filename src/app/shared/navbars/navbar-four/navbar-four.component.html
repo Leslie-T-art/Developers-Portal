@@ -1,52 +1,44 @@
 <header>
-    <nav class="navbar navbar-expand-lg topnav-menu" [class]="navClass" [attr.id]="sticky ? 'sticky' : 'navbar-4'"
-        appStickyNav>
+    <nav class="navbar navbar-expand-lg topnav-menu" [class]="navClass" [attr.id]="sticky ? 'sticky' : 'navbar-4'" appStickyNav>
         <div [class]="fixedWidth ? 'container' : 'container-fluid'">
-            <a class="navbar-brand  me-lg-3 me-auto" routerLink="/pages/account/dashboard">
+            <a class="navbar-brand me-lg-3 me-auto" routerLink="/pages/account/dashboard">
                 <img src="assets/images/logo.png" height="30" class="d-inline-block align-top" alt="" />
             </a>
 
-            <a href="javascript:void(0)" class="navbar-toggler me-3" (click)="collapse.toggle()"
-                [attr.aria-expanded]="showMobileMenu" aria-controls="topnav-menu-content4"
-                aria-label="Toggle navigation">
+            <a href="javascript:void(0)" class="navbar-toggler me-3" (click)="toggleMobileMenu()" 
+                [attr.aria-expanded]="showMobileMenu" aria-controls="topnav-menu-content4" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </a>
-            <div class="collapse navbar-collapse" id="topnav-menu-content4" #collapse="ngbCollapse"
+
+            <div class="collapse navbar-collapse" id="topnav-menu-content4" #collapse="ngbCollapse" 
                 [(ngbCollapse)]="!showMobileMenu">
 
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item" *ngFor="let menu of topMenu;let i=index" [class.me-3]="i<topMenu.length-1">
-                        <a class="nav-link" routerLink="/pages/account/dashboard" [class.active]="i===0">
+                    <li class="nav-item" *ngFor="let menu of topMenu; let i = index" [class.me-3]="i < topMenu.length - 1">
+                        <a class="nav-link" [routerLink]="menu.redirectTo" [class.active]="i === 0">
                             <div class="d-flex align-items-center">
                                 <span class="icon-xxs me-1 flex-shrink-0">
-                                    <i [attr.data-feather]="menu.icon"
-                                        [class]="i===0 ? 'icon-dual-primary' : 'icon-dual-dark'"></i>
+                                    <i [attr.data-feather]="menu.icon" [class]="i === 0 ? 'icon-dual-primary' : 'icon-dual-dark'"></i>
                                 </span>
                                 <div class="flex-grow-1">{{menu.name}}</div>
                             </div>
                         </a>
                     </li>
-                    
                 </ul>
 
                 <ul class="navbar-nav align-items-lg-center">
-                    <!-- notification start -->
+                    <!-- Notification dropdown start -->
                     <li class="nav-item" ngbDropdown>
-                        <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="notifications"
-                            ngbDropdownToggle>
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="notifications" ngbDropdownToggle>
                             <span class="icon-xs">
                                 <i data-feather="bell" class="icon-dual-dark"></i>
                             </span>
                         </a>
                         <div class="p-2" aria-labelledby="notifications" ngbDropdownMenu>
-
-                            <a ngbDropdownItem class="p-2" [routerLink]="['.']"
-                                *ngFor="let notification of notifications">
+                            <a ngbDropdownItem class="p-2" [routerLink]="['.']" *ngFor="let notification of notifications">
                                 <div class="d-flex align-items-center">
-                                    <span
-                                        class="bg-soft-{{notification.variant}} avatar avatar-xs rounded icon icon-with-bg icon-xxs text-{{notification.variant}} me-3 flex-shrink-0">
-                                        <i [attr.data-feather]="notification.icon"
-                                            class="icon-dual-{{notification.variant}}"></i>
+                                    <span class="bg-soft-{{notification.variant}} avatar avatar-xs rounded icon icon-with-bg icon-xxs text-{{notification.variant}} me-3 flex-shrink-0">
+                                        <i [attr.data-feather]="notification.icon" class="icon-dual-{{notification.variant}}"></i>
                                     </span>
                                     <div class="flex-grow-1">
                                         <h6 class="fw-medium my-0 fs-13">{{notification.text}}</h6>
@@ -55,22 +47,19 @@
                                 </div>
                             </a>
 
-                            <!-- view all start -->
-                            <a [routerLink]="['.']"
-                                class="mt-2 text-center bg-light fs-13 btn btn-light btn-sm d-block">View
-                                All</a>
-                            <!-- view all end -->
+                            <!-- View all notifications start -->
+                            <a [routerLink]="['.']" class="mt-2 text-center bg-light fs-13 btn btn-light btn-sm d-block">View All</a>
+                            <!-- View all notifications end -->
                         </div>
                     </li>
-                    <!-- notification end -->
+                    <!-- Notification dropdown end -->
 
-                    <!-- profile dropdown start -->
-                    <li class="nav-item " ngbDropdown>
+                    <!-- Profile dropdown start -->
+                    <li class="nav-item" ngbDropdown>
                         <a class="nav-link py-0" href="javascript:void(0)" id="user" ngbDropdownToggle>
                             <div class="d-flex align-items-center">
                                 <div class="flex-shrink-0">
-                                    <img src="assets/images/avatars/img-8.jpg"
-                                        class="avatar avatar-xs rounded-circle me-2" alt="" />
+                                    <img src="assets/images/avatars/img-8.jpg" class="avatar avatar-xs rounded-circle me-2" alt="" />
                                 </div>
                                 <div class="flex-grow-1 ms-1 lh-base">
                                     <span class="fw-semibold fs-13 d-block line-height-normal">Leslie C</span>
@@ -78,12 +67,9 @@
                                 </div>
                             </div>
                         </a>
-
                         <div class="p-2" aria-labelledby="user" ngbDropdownMenu>
-                            <ng-container *ngFor="let option of profileOptions;let i=index">
-
-                                <div class="dropdown-divider" *ngIf="i===profileOptions.length-1"></div>
-
+                            <ng-container *ngFor="let option of profileOptions; let i = index">
+                                <div class="dropdown-divider" *ngIf="i === profileOptions.length - 1"></div>
                                 <a class="dropdown-item p-2" [routerLink]="option.redirectTo">
                                     <i class="icon icon-xxs me-1 icon-dual" [attr.data-feather]="option.icon"></i>
                                     {{option.label}}
@@ -91,7 +77,7 @@
                             </ng-container>
                         </div>
                     </li>
-                    <!-- profile dropdown end -->
+                    <!-- Profile dropdown end -->
                 </ul>
             </div>
         </div>
