@@ -22,7 +22,7 @@ export class HelpComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Get all Help");
+    this.titleService.setTitle("quicKPI");
     this._fetchData();
   }
 
