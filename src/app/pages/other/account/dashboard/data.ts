@@ -17,13 +17,13 @@ const PROJECTS: Project[] = [
         members: ['assets/images/avatars/img-8.jpg', 'assets/images/avatars/img-5.jpg'],
     },
     {
-        date: 'Aug 10, 2020',
-        title: 'Prompt v2.0',
+        date: 'Aug 10, 2024',
+        title: 'quicKPI v1.0',
         state: {
             name: 'Planning',
             variant: 'orange',
         },
-        description: 'Plan new features and functionality for prompt...',
+        description: 'Plan new features and functionality for quicKPI...',
         progress: {
             value: 50,
             variant: 'danger',
