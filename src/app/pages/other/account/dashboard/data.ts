@@ -4,9 +4,9 @@ import { Project, Task } from "./dashboard.model";
 const PROJECTS: Project[] = [
     {
         date: 'Aug 09, 2020',
-        title: 'Shreyu - Design Updates',
+        title: 'Gwenya Updates',
         state: {
-            name: 'Designing',
+            name: 'Frontend',
             variant: 'primary',
         },
         description: 'Update shreyu with modern and latest trends...',
@@ -17,13 +17,13 @@ const PROJECTS: Project[] = [
         members: ['assets/images/avatars/img-8.jpg', 'assets/images/avatars/img-5.jpg'],
     },
     {
-        date: 'Aug 10, 2024',
-        title: 'quicKPI v1.0',
+        date: 'Aug 10, 2025',
+        title: 'EasyLoans',
         state: {
             name: 'Planning',
             variant: 'orange',
         },
-        description: 'Plan new features and functionality for quicKPI...',
+        description: 'Plan new features and functionality for easyloans...',
         progress: {
             value: 50,
             variant: 'danger',
