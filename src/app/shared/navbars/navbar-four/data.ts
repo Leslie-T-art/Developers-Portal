@@ -8,18 +8,18 @@ const TOPMENU: TopNavItem[] = [
         redirectTo: '.'},
     {
         icon: 'folder',
-        redirectTo: '/auth/login',
+        redirectTo: '/landing/app',
         name: 'Projects'
     },
     {
         icon: 'list',
-        redirectTo: '/auth/login',
+        redirectTo: '/landing/coworking',
 
         name: 'Tasks'
     },
     {
         icon: 'bar-chart-2',
-        redirectTo: '/auth/login',
+        redirectTo: '/landing/portfolio',
 
         name: 'Reports'
     }
