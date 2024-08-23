@@ -51,7 +51,7 @@ export class ContactUsComponent implements OnInit {
             properties: {
               id: 21,
               label: '$121',
-              name: 'Coderthemes Design LLP',
+              name: 'quicKPI Design LLP',
               link: '/',
               description: '',
               address: '565 Brrom Str, NY'
