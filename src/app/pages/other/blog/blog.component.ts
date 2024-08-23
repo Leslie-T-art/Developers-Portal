@@ -29,7 +29,7 @@ export class BlogComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Blog");
+    this.titleService.setTitle("quicKPI");
     this._fetchData();
   }
 
