@@ -9,8 +9,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AccountTabComponent implements OnInit {
 
   accountForm: FormGroup = this.fb.group({
-    name: ['Greeva Navadiya', Validators.required],
-    displayName: ['Greeva N'],
+    name: ['Leslie Chihwai', Validators.required],
+    displayName: ['Leslie C'],
     email: ['lesliec@xplug.co.zw', [Validators.required, Validators.email]],
     phone: ['+1 254 024 5400', Validators.required],
     profileVisibility: ['public'],
