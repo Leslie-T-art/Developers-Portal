@@ -26,7 +26,7 @@ export class PortfolioGridComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Portfolio Grid Example");
+    this.titleService.setTitle("quicKPI");
     this._fetchData();
   }
 
