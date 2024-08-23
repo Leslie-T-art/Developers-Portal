@@ -25,7 +25,7 @@ export class PricingComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Pricing Page");
+    this.titleService.setTitle("quicKPI");
     this._fetchData();
   }
 
