@@ -18,7 +18,7 @@ export class BlogPostComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Blog Post");
+    this.titleService.setTitle("quicKPI - Angular | Blog Post");
     this._fetchData();
   }
 
