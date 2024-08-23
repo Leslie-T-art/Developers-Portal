@@ -21,7 +21,7 @@ const SLIDES1: AuthSlider[] = [
 
 const SLIDES2: SliderItem[] = [
     {
-        text: ' This app is a truly blessing for all professionals! A day to day project management was never easy for me.But with prompt, I can manage more than 100 projects easily.',
+        text: ' This app is a truly blessing for all professionals! A day to day project management was never easy for me.But with quicKPI, I can manage more than 100 projects easily.',
         customer: {
             avatar: 'assets/images/avatars/img-8.jpg',
             name: 'Cersei Lannister',
