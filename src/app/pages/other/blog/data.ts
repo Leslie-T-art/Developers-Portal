@@ -24,7 +24,7 @@ const BLOGPOSTS1: BlogPost[] = [
             'The web is changed in the current era a lot. Many new trends are being used in the market at the moment...',
         postedBy: {
             avatar: 'assets/images/avatars/img-2.jpg',
-            name: 'Greeva N',
+            name: 'Leslie C',
         },
         postedOn: {
             date: '9 Mar, 2020',
