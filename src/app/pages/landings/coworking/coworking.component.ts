@@ -24,7 +24,7 @@ export class CoworkingComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Co-Working Space Landing Page");
+    this.titleService.setTitle("quicKPI");
     this._fetchData();
   }
 
