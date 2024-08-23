@@ -20,7 +20,7 @@ export class MarketingComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Marketing Landing Page");
+    this.titleService.setTitle("quicKPI");
     this._fetchData()
   }
 
