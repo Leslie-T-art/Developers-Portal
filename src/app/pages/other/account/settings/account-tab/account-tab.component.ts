@@ -11,7 +11,7 @@ export class AccountTabComponent implements OnInit {
   accountForm: FormGroup = this.fb.group({
     name: ['Greeva Navadiya', Validators.required],
     displayName: ['Greeva N'],
-    email: ['greeva@coderthemes.com', [Validators.required, Validators.email]],
+    email: ['lesliec@xplug.co.zw', [Validators.required, Validators.email]],
     phone: ['+1 254 024 5400', Validators.required],
     profileVisibility: ['public'],
     infoVisibility: ['public'],
