@@ -23,7 +23,7 @@ export class PortfolioComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Portfolio Page");
+    this.titleService.setTitle("quicKPI");
     this._fetchData();
   }
 
