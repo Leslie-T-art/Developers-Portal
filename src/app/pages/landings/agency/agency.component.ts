@@ -24,7 +24,7 @@ export class AgencyComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | A Landing Page for an Agency");
+    this.titleService.setTitle("quicKPI");
     this._fetchData();
   }
 
