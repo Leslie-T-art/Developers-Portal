@@ -27,7 +27,7 @@ export class PortfolioMasonryComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Portfolio Masonry Example");
+    this.titleService.setTitle("quicKPI");
     this._fetchData();
   }
 
