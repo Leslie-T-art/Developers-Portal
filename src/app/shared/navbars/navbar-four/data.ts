@@ -22,12 +22,12 @@ const TOPMENU: TopNavItem[] = [
         redirectTo: '/auth/logout',
 
         name: 'Reports'
-    },
-    {
-        icon: 'tool',
-        redirectTo: '/pages/account/settings',
-        name: 'Settings'
     }
+    // {
+    //     icon: 'tool',
+    //     redirectTo: '/pages/account/settings',
+    //     name: 'Settings'
+    // }
 ];
 
 const NOTIFICATIONS: Notification[] = [
