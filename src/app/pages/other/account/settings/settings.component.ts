@@ -14,7 +14,7 @@ export class SettingsComponent implements OnInit {
   constructor (private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Prompt - Angular | Account Settings");
+    this.titleService.setTitle("quicKPI");
   }
 
   ngAfterViewInit(): void {
