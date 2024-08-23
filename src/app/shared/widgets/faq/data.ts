@@ -12,11 +12,11 @@ const FAQS: FAQItem[] = [
     },
     {
         question: 'How do I get help with the theme?',
-        ans: 'Use our dedicated support email (support@coderthemes.com) to send your issues or feedback.We are here to help anytime.',
+        ans: 'Use our dedicated support email (www.xplug.co.zw) to send your issues or feedback.We are here to help anytime.',
     },
     {
-        question: 'Will you regularly give updates of Prompt ?',
-        ans: 'Yes, We will update the Prompt regularly. All the future updates would be available without any cost.',
+        question: 'Will you regularly give updates of quicKPI ?',
+        ans: 'Yes, We will update the quicKPI regularly. All the future updates would be available without any cost.',
     },
 ];
 
