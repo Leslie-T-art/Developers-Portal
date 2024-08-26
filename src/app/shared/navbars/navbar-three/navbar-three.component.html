@@ -18,17 +18,29 @@
                 </app-menu>
 
                 <ul class="navbar-nav">
+                    <li class="nav-item" ngbDropdown>
+                        <a class="nav-link py-0" href="javascript:void(0)" id="user" ngbDropdownToggle>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <img src="assets/images/avatars/img-8.jpg" class="avatar avatar-xs rounded-circle me-2" alt="" />
+                                </div>
+                                <div class="flex-grow-1 ms-1 lh-base">
+                                    <span class="fw-semibold fs-13 d-block line-height-normal">Leslie C</span>
+                                    <span class="text-muted fs-13">Admin</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="p-2" aria-labelledby="user" ngbDropdownMenu>
+                            <ng-container *ngFor="let option of profileOptions; let i = index">
+                                <div class="dropdown-divider" *ngIf="i === profileOptions.length - 1"></div>
+                                <a class="dropdown-item p-2" [routerLink]="option.redirectTo">
+                                    <i class="icon icon-xxs me-1 icon-dual" [attr.data-feather]="option.icon"></i>
+                                    {{option.label}}
+                                </a>
+                            </ng-container>
+                        </div>
+                    </li>
 
-                    <li class="nav-item">
-                        <a class="btn btn-sm me-2 fw-medium fs-15 shadow-none text-dark" [routerLink]="['/auth/login']"
-                            *ngIf="!loggedInUser">Login</a>
-                        <a class="btn btn-sm me-2 fw-medium fs-15 shadow-none text-dark" [routerLink]="['/auth/logout']"
-                            *ngIf="loggedInUser">Logout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn" [class]="ctaButtonClass ? ctaButtonClass : 'btn-soft-primary'"
-                            [routerLink]="['/']">Download</a>
-                    </li>
                 </ul>
 
             </div>
