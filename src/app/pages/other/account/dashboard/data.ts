@@ -9,7 +9,7 @@ const PROJECTS: Project[] = [
             name: 'Frontend',
             variant: 'primary',
         },
-        description: 'Update shreyu with modern and latest trends...',
+        description: 'Update quickpi with modern and latest trends...',
         progress: {
             value: 75,
             variant: 'success',
@@ -37,7 +37,7 @@ const PROJECTS: Project[] = [
             name: 'Development',
             variant: 'info',
         },
-        description: 'Update shreyu with modern and latest trends...',
+        description: 'Update quickpi with modern and latest trends...',
         progress: {
             value: 60,
             variant: 'warning',
