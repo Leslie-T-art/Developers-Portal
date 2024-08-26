@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import feather from 'feather-icons';
 
@@ -8,20 +8,50 @@ import { AuthenticationService } from 'src/app/core/service/auth.service';
 // types
 import { User } from 'src/app/core/models/auth.models';
 
+interface ProfileOption {
+  icon: string;
+  label: string;
+  redirectTo: string;
+}
+
+const PROFILEOPTIONS: ProfileOption[] = [
+  {
+    icon: 'user',
+    label: 'Profile',
+    redirectTo: '.',
+  },
+  {
+    icon: 'settings',
+    label: 'Settings',
+    redirectTo: '/pages/account/settings',
+  },
+  {
+    icon: 'aperture',
+    label: 'Support',
+    redirectTo: '.',
+  },
+  {
+    icon: 'unlock',
+    label: 'Sign Out',
+    redirectTo: '/auth/logout',
+  },
+];
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent implements OnInit, AfterViewInit {
 
   @Input() navClass?: string;
   @Input() showDownload: boolean = true;
   @Input() ctaButtonClass: string = '';
 
   loggedInUser: User | null = null;
+  profileOptions: ProfileOption[] = PROFILEOPTIONS;
 
-  constructor (
+  constructor(
     private router: Router,
     private authenticationService: AuthenticationService,
   ) { }
@@ -31,15 +61,15 @@ export class MenuComponent implements OnInit {
   }
 
   /**
- * On view init - activating menuitems
- */
+   * On view init - activating menu items
+   */
   ngAfterViewInit() {
     feather.replace();
   }
 
   /**
-   * checks if path is segment of url 
-   * @param path path of menu
+   * Checks if the path is a segment of the URL 
+   * @param path path of the menu
    */
   isActive(path: string): boolean {
     return this.router.isActive(path, {
@@ -49,6 +79,4 @@ export class MenuComponent implements OnInit {
       fragment: 'ignored'
     });
   }
-
-
 }
