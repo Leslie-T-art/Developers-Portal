@@ -1,49 +1,186 @@
-<section class="position-relative overflow-hidden features-1 py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <span class="badge rounded-pill badge-soft-primary px-2 py-1">Features</span>
-                <h1 class="display-5 fw-semibold">App works best with quicKPI</h1>
-                <p class="text-muted mx-auto">
-                    Start working with <span class="text-primary fw-bold">quicKPI</span> to showcase your app to
-                    thousands of people.
-                </p>
-            </div>
-        </div>
-        <div class="row align-items-center mt-0 mt-sm-5">
-            <div class="col-lg-5">
-                <div class="img-content position-relative">
-                    <div class="img-up">
-                        <img src="assets/images/features/app2.png" alt="app-img" class="img-fluid d-block"
-                            data-aos="zoom-in-right" />
-                    </div>
+<style>
+    /* Section background color */
+    .features-1 {
+        background-color: #f7f7f7; /* Slightly gray background */
+    }
+    
+    /* Card styles */
+    .card {
+        background-color: #ffffff; /* White background */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+        overflow: hidden; /* Ensure rounded corners are visible */
+    }
+    
+    /* Modal styles */
+    .modal-content {
+        border-radius: 10px; /* Slightly rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a modern look */
+    }
+    
+    /* Center modals vertically and horizontally */
+    .modal-dialog {
+        display: flex;
+        align-items: center;
+        min-height: calc(100% - 3.5rem); /* Adjust based on header and footer height */
+    }
+    
+    /* Button styles */
+    .btn {
+        border-radius: 20px; /* Rounded corners */
+    }
+    
+    /* Specific button styles */
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+    
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+    
+    /* Progress bar styles */
+    .progress-bar {
+        height: 8px; /* Adjust thickness here */
+        line-height: 0; /* Remove any text or line height */
+        border-radius: 0; /* Remove border-radius if you want a flat progress bar */
+    }
+    </style>
+    
+    <section class="position-relative overflow-hidden features-1 py-5">
+        <!-- Top Row: Title --><br/>            <br/>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">Projects Dashboard</h1>
                 </div>
             </div>
+    
+            <!-- Second Row: Search, Add Button, Exit Button -->
+            <div class="row mt-4">
+                <!-- Search Bar Column -->
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <input type="text" class="form-control" placeholder="Seek and you'll find ...">
+                </div>
+            
+                <!-- Buttons Column -->
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#addProjectModal">
+                        Add Project
+                    </button>
+                    <button type="button" class="btn btn-danger">
+                        Exit
+                    </button>
+                </div>
+            </div>
+            
+            
+    
+            <br/>            <br/>
 
-            <div class="col-lg-7">
-                <div class="row mt-5 mt-lg-0 ps-4 ps-sm-5">
-                    <div class="col-md-6">
-                        <app-feature-widget icon="mail" iconBg="primary" title="First feature"
-                            description="We use a customized application tobe specifically designed a testing gnose to keep away for people."
-                            descrpClasses="mb-4 pb-3"></app-feature-widget>
+            <!-- Third Row: Project Cards -->
+            <div class="row mt-4">
+                <div class="col-md-3 mb-4" *ngFor="let project of projects">
+                    <div class="card" (click)="openProjectDetails(project)">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ project.name }}</h5>
+                            <p class="card-text">Start Date: {{ project.startDate }}</p>
+                            <p class="card-text">End Date: {{ project.endDate }}</p>
+                            <p class="card-text">Status: {{ project.status }}%</p>
+                            
+                            <!-- Progress Bar -->
+                            <div class="progress">
+                                <div 
+                                    class="progress-bar {{ getStatusClass(project.status) }}" 
+                                    role="progressbar" 
+                                    [style.width.%]="project.status" 
+                                    [attr.aria-valuenow]="project.status" 
+                                    aria-valuemin="0" 
+                                    aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <app-feature-widget icon="shield" iconBg="success" title="Second feature"
-                            description="In order to design a mobile app that is going to be module downloaded and accessed frequently by users."
-                            descrpClasses="mb-4 pb-3"></app-feature-widget>
+                </div>
+            </div>
+    
+            <!-- Pagination -->
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modal: Add Project -->
+        <div class="modal fade" id="addProjectModal" tabindex="-1" aria-labelledby="addProjectModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addProjectModalLabel">Add New Project</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="col-md-6">
-                        <app-feature-widget icon="sliders" iconBg="orange" title="Third feature"
-                            description="A Private Limited is the most popular type of partnership Malta. The limited liabilityis"
-                            descrpClasses="mb-4 pb-3"></app-feature-widget>
+                    <div class="modal-body">
+                        <!-- Fields to add collaborators, managers, approvers, scrum masters -->
+                        <div class="mb-3">
+                            <label for="projectName" class="form-label">Project Name</label>
+                            <input type="text" class="form-control" id="projectName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="collaborators" class="form-label">Collaborators</label>
+                            <input type="text" class="form-control" id="collaborators">
+                        </div>
+                        <div class="mb-3">
+                            <label for="managers" class="form-label">Managers</label>
+                            <input type="text" class="form-control" id="managers">
+                        </div>
+                        <div class="mb-3">
+                            <label for="approvers" class="form-label">Approvers</label>
+                            <input type="text" class="form-control" id="approvers">
+                        </div>
+                        <div class="mb-3">
+                            <label for="scrumMasters" class="form-label">Scrum Masters</label>
+                            <input type="text" class="form-control" id="scrumMasters">
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <app-feature-widget icon="bell" iconBg="info" title="Fourth feature"
-                            description="Few derived into talking being in merit long you'd his the of to had the to duties, it them one…"
-                            descrpClasses="mb-4 pb-3"></app-feature-widget>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save Project</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    
+        <!-- Modal: Project Details -->
+        <div *ngIf="selectedProject" class="modal fade" id="projectDetailsModal" tabindex="-1" aria-labelledby="projectDetailsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="projectDetailsModalLabel">{{ selectedProject?.name }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Collaborators: {{ selectedProject?.collaborators?.join(', ') ?? 'N/A' }}</p>
+                        <p>Managers: {{ selectedProject?.managers?.join(', ') ?? 'N/A' }}</p>
+                        <p>Approvers: {{ selectedProject?.approvers?.join(', ') ?? 'N/A' }}</p>
+                        <p>Scrum Masters: {{ selectedProject?.scrumMasters?.join(', ') ?? 'N/A' }}</p>
+                        <p>Score: {{ selectedProject?.score ?? 0 }}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
